@@ -6,13 +6,10 @@ body {
 }
 h3 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 900 !important;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    background: linear-gradient(90deg, #0078D7, #0056b3);
-    color: white;
-    padding: 12px 20px;
-    border-radius: 5px;
+    letter-spacing: 1.5px;   
+    color: black;
     display: inline-block;
     margin-top: 20px;  /* Space above */
     margin-bottom: 20px; /* Space below */
