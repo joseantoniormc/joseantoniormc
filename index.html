@@ -1,225 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jose Antonio Ramirez Marquez</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="port.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jose Antonio Ramirez Marquez</title>
+  <link rel="stylesheet" href="port.css" />
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-    <header id="header" class="bg-gray-900 text-white h-screen flex flex-col items-center justify-center text-center">
-        <nav class="w-full bg-gray-800 text-white py-4 shadow-lg fixed top-0 z-50 nav-animate">
-            <ul class="flex justify-center space-x-1">
-                <li><a href="#header" class="hover:underline">Home</a></li>
-                <p>|<p>
-                <li><a href="#projects" class="hover:underline">Projects</a></li>
-                <p>|<p>
-                <li><a href="#education" class="hover:underline">Education</a></li>
-                <p>|<p>
-                <li><a href="#experience" class="hover:underline">Experience</a></li>
-                <p>|<p>
-                <li><a href="#skills" class="hover:underline">Skills</a></li>
-            </ul>
-        </nav>
-        <div class="bg-gray-900 text-white h-screen flex flex-col items-center justify-center text-center relative fade-in" >
-            <ul class="background">
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-           <li></li>
-        </ul>
-            <img src="img/jarmprofile.png" alt="Profile Picture" class="w-40 h-40 rounded-full border-4 border-white scale-in">
-            <div class="flex flex-col md:flex-row items-center space-x-8">
-                <h1 class="text-5xl font-semibold">Jose <strong>Antonio Ramirez</strong> Marquez</h1>              
-            </div>
-            <div class="flex space-x-4 mt-4 items-center justify-center">
-                    <a href="mailto:jose.ramirezmarquez@duke.edu" class="w-12 h-12 flex items-center justify-center bg-blue-500 rounded-full text-white text-lg font-bold hover:bg-blue-700 transition scale-in"><img src="img/correo-electronico.png" width="30px"></a>
-                    <a href="https://www.linkedin.com/in/joseantoniorm/" target="_blank" class="w-12 h-12 flex items-center justify-center bg-blue-700 rounded-full text-white text-lg font-bold hover:bg-blue-900 transition scale-in"><img src="img/linkedin.png" width="30px"></a>
-                    <a href="https://github.com/joseantoniormc" target="_blank" class="w-12 h-12 flex items-center justify-center bg-gray-700 rounded-full text-white text-lg font-bold hover:bg-gray-900 transition scale-in"><img src="img/github.png" width="30px"></a>
-                </div>
-            <div class="flex space-x-4 flex-col md:flex-row items-center md:items-center mt-6 text-lg font-semibold fade-in text-left md:text-center">
-                <a href="#projects" class="secnav">Best Projects</a>
-                <a href="#education" class="secnav">Education</a>
-                <a href="#experience" class="secnav">Experience</a>
-                <a href="#skills" class="secnav">Technical Skills</a>
-            </div>
-        </div>
-    </header>
+<body>
+  <header id="header" class="apple-hero-banner">
+    <nav class="apple-nav">
+      <ul>
+        <li><a href="#header">Home</a></li>
+        <li><a href="#carousel">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+      </ul>
+    </nav>
 
-    <section id="projects" class="max-w-5xl mx-auto mt-20 space-y-10 text-center ">
-        <h3 class="text-5xl font-semibold  mb-10">Projects</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="project-card">
-                <img src="img/tire_classifier.jpg" alt="Tire Condition Classifier" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-2xl font-semibold">Tire Condition Classifier</h3>
-                <p class="mt-2">Automated tire condition classification using CNNs and transfer learning with VGG16, leveraging image augmentation and neural network optimization.</p>
-                <div class="section-divider"></div>
-                <div class="text-center">
-                <a href="https://github.com/joseantoniormc/Tire_Condition_Classifier_CNN" target="_blank" class="h-12 flex items-center justify-center bg-gray-700 rounded-full text-white text-lg font-bold hover:bg-gray-900 transition scale-in"><img src="img/github.png" width="40px">GitHub Repository
-                </a>
-                </div>
+    <div class="banner-content">
+      <div class="text-block">
+        <h1>Jose <strong>Antonio Ramirez</strong> Marquez</h1>
+        <p class="tagline">Data Analytics | Data Science | AI | Business Analytics</p>
+        <div class="hero-links">
+          <a href="mailto:jose.ramirezmarquez@duke.edu" title="Email"><img src="img/correo-electronico.png" alt="email" /></a>
+          <a href="https://www.linkedin.com/in/joseantoniorm/" target="_blank" title="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn" /></a>
+          <a href="https://github.com/joseantoniormc" target="_blank" title="GitHub"><img src="img/github.png" alt="GitHub" /></a>
+        </div>
+      </div>
+      <div class="image-block">
+        <img src="img/jarm-hero.png" alt="Jose Antonio Portrait" />
+      </div>
+    </div>
+  </header>
+
+  <section id="carousel" class="hero-carousel-container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="carousel apple-carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide active">
+          <img src="img/tire_classifier.jpg" alt="Tire Classifier" />
+          <div class="carousel-caption">
+            <h1>Tire Condition Classifier</h1>
+            <p>Smart classification powered by CNNs and VGG16</p>
+            <a href="https://github.com/joseantoniormc/Tire_Condition_Classifier_CNN" target="_blank">GitHub Repository</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/flight_delay.jpg" alt="Flight Delay Prediction" />
+          <div class="carousel-caption">
+            <h1>Flight Delay Prediction</h1>
+            <p>Predict late flights using machine learning</p>
+            <a href="https://github.com/joseantoniormc/flight_delay_prediction" target="_blank">GitHub Repository</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/sentiment_analysis.jpg" alt="Sentiment RNN" />
+          <div class="carousel-caption">
+            <h1>Sentiment Analysis</h1>
+            <p>Using RNNs to understand emotions in reviews</p>
+            <a href="https://github.com/joseantoniormc/Sentimient_Analysis" target="_blank">GitHub Repository</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+<!-- POSTS -->
+
+  <main>
+    <!-- POSTS -->
+    <!-- MODAL TEMPLATE -->
+        <div id="modal-duke" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('duke')">&times;</span>
+            <h2 class="modal-title">This is #TeamFuqua</h2>
+            <img src="img/mktclass.jpg" alt="Fuqua Classroom" class="modal-img">
+            <p>
+              A <strong>Master’s in Business Analytics</strong> brings with it a variety of courses that, in my opinion, combine the best of both worlds. Classes in statistics, data science, machine learning, the much-coveted artificial intelligence, quantitative market research, and much more, all without losing sight of the practicality these skills bring to a business model. More than anything, it’s about understanding both worlds in order to turn analysis into a real story that supports decision-making.
+            </p>
+            <p>
+              Since arriving at Fuqua, I’ve had the opportunity to take classes with professors whose experience I never could have imagined, and it’s been a privilege to hear how they use their knowledge to tell us things like, 
+              <em>"Your manager won’t care if your p-value is less than 0.05; your manager will want to know how your analysis brings value to the company,"</em> to paraphrase Professor Belloni.
+              These kinds of tangible experiences really make you reflect on how what you're learning goes far beyond a test answer.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/glova.jpg" alt="Sarah Glova">
+                <p class="profile-name"><em>Sarah Glova</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/belloni.jpg" alt="Josh">
+                <p class="profile-name"><em>Alexandre Belloni</em></p>
+              </div>
             </div>
-            <div class="project-card">
-                <img src="img/flight_delay.jpg" alt="Flight Delay Prediction" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-2xl font-semibold">Flight Delay Prediction</h3>
-                <p class="mt-2">Machine learning model predicting flight delays of more than 15 minutes based on various flight features such as departure time, airline, origin, and distance.</p>
-                <div class="section-divider"></div>
-                <a href="https://github.com/joseantoniormc/flight_delay_prediction" target="_blank" class="h-12 flex items-center justify-center bg-gray-700 rounded-full text-white text-lg font-bold hover:bg-gray-900 transition scale-in"><img src="img/github.png" width="40px">GitHub Repository
-                </a>
+            <p>
+              Even more importantly, it's realizing that analysis that can’t be communicated is useless, and that you carry business classes with you forever 
+              <strong>(I will always be a loyal follower of the Glova school of storytelling)</strong>. 
+              This master’s program has meant being part of the entire data-driven decision-making process: collection, cleaning, analysis, visualization, and storytelling.
+            </p>
+            <p>
+              However, beyond all the knowledge or the amazing projects I was able to work on at Duke, the most valuable part of the experience was seeing how, in just one year, complete strangers can become part of a community you never want to leave. 
+              It's understanding how names you had never heard before become friends you don’t want to let go of. 
+              It's laughing, walking, talking, and soaking in the experiences of others to help grow your own just a little more.
+            </p>
+          </div>
+        </div>
+
+        <div id="modal-up" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('up')">&times;</span>
+            <h2 class="modal-title">To be a Pantera in Mexico City</h2>
+            <img src="img/up.jpg" alt="UP-class" class="modal-img">
+            <p>
+              After being involved in my family business since my teenage years—and having to learn a bit of everything—I was genuinely curious to dive deeper into accounting, finance, marketing, and strategy. It may sound cliché, but this was one of those moments where I studied something because I was truly interested in it, beyond the social expectations around it, and I made the most of every class I took.
+            </p>
+            <p>
+              At Universidad Panamericana, I had incredible professors. I’ll especially never forget my program director, <strong>Lizbeth Nuñez</strong>, who gave me the push I needed to be myself—in the way I work, communicate, and show up as a human being.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/liz.jpg" alt="Liz">
+                <p class="profile-name"><em>Libeth Nuñez Ramírez</em></p>
+              </div>
             </div>
-            <div class="project-card">
-                <img src="img/sentiment_analysis.jpg" alt="Sentiment Analysis With RNN" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-2xl font-semibold">Sentiment Analysis RNN</h3>
-                <p class="mt-2">Sentiment analysis model using PyTorch and an RNN to classify IMDB movie reviews as positive or negative, capturing the sequence of words in text.</p>
-                <div class="section-divider"></div>
-                <a href="https://github.com/joseantoniormc/Sentimient_Analysis" target="_blank" class="h-12 flex items-center justify-center bg-gray-700 rounded-full text-white text-lg font-bold hover:bg-gray-900 transition scale-in"><img src="img/github.png" width="40px">GitHub Repository
-                </a>
+            <p>
+          </div>
+        </div>
+
+        <div id="modal-soho" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('soho')">&times;</span>
+            <h2 class="modal-title">Customer Experience and Analytics</h2>
+            <img src="img/soho.jpg" alt="sohosquared" class="modal-img">
+            <p>
+              After finishing my undergrad, I knew I wanted to gain experience at a company that used data analysis not just to drive business value, but also to improve the customer experience. <strong>Andrés de la Peña</strong> gave me the opportunity to join Soho Squared, which had just launched a special team in Mexico City to collaborate directly with <strong>InMoment</strong> (a leading SaaS company in Customer Experience) in developing CX programs and supporting special projects alongside <strong>Josh Skinner</strong>.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/andresdlp.jpg" alt="Andres">
+                <p class="profile-name"><em>Andres de la Peña</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/joshs.jpg" alt="Josh">
+                <p class="profile-name"><em>Josh Skinner</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/fen.jpg" alt="Fenerose Moulton">
+                <p class="profile-name"><em>Fenerose Moulton</em></p>
+              </div>
             </div>
+            <p>
+              During this experience, I worked with multiple teams to implement programs, migrate SQL databases to the InMoment Cloud, develop surveys and dashboards for analysis, and gain valuable exposure to a range of industries through their CX functions.
+            </p>
+            <p>
+              Although my core team was based in Mexico City, I had the privilege of working with colleagues from Canada, the U.S., India, and the UK; an invaluable opportunity to grow my ability to work in multicultural, cross-functional teams.
+            </p>
+            <p>
+              I was also fortunate to sharpen my problem-solving skills on live client accounts under pressure, thanks to the guidance of <strong>Fenerose</strong>. She constantly encouraged me to think creatively, innovate solutions, and stay calm in high-stakes situations. Many of the lessons I learned from her will stay with me for life.
+            </p>
+          </div>
+        </div>
+
+        <div id="modal-colgate" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('colgate')">&times;</span>
+            <h2 class="modal-title">Colgate</h2>
+            <img src="img/colgate.webp" alt="colgate" class="modal-img">
+            <p>
+              My first work experience was with one of the largest and most recognized companies in the world, Colgate. I will never forget how exciting it was to see the offices of a company whose products I saw every day at the supermarket and personally used.
+            </p>
+            <p>
+              Understanding all the departments and being part of the new products team was an absolute delight. I had the opportunity to see the innovations Colgate was preparing a year before the public could learn about them. I also had the chance to work hand in hand with staff from all the product teams: from Ajax, Colgate 360, and Colgate, to Tom's and Fabuloso.
+            </p>
+            <p>
+              What’s more, I was responsible for tracking requirements and reporting the launch status to Colgate and the company’s largest clients. Analyzing so many products and learning all the requirements involved in launching a personal care product was like opening my eyes to a hidden world.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/colgatelogo.webp" alt="Colgate">
+              </div>
+              <div class="profile-item">
+                <img src="img/images.jpeg" alt="Ajax">
+              </div>
+              <div class="profile-item">
+                <img src="img/images.png" alt="Fabuloso">
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <section id="education" class="section">
+      <div class="section-inner">
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-exp-grid" >
+        <div class="edu-exp-card" style="background: linear-gradient(to bottom, #d0e9ff, #ffffff); text-align: center; border-radius: 0;">
+          <img src="img/duke.png" alt="Duke University">
+          <h4 style="font-size: 2rem;">Duke University</h4>
+          <p style="font-size: 1.1rem;">Master of Science in Business Analytics<br><strong>Graduated May 2025</strong></p>
+          <button class="btn learn-more" onclick="openModal('duke')">Learn more</button>
+        </div>
+
+        <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+          <img src="img/UP.png" alt="Universidad Panamericana">
+          <h4 style="font-size: 2rem;">Universidad Panamericana</h4>
+          <p style="font-size: 1.1rem;">Bachelor of Business Administration<br><strong>Graduated December 2022</strong></p>
+          <button class="btn learn-more" onclick="openModal('up')">Learn more</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section" style="padding: 4rem 0;">
+      <h2 class="section-title">Experience</h2>
+      <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
+        <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+          <img src="img/tinmoment.png" alt="Soho Squared" style="max-width:100%; !important">
+          <h4 style="font-size: 2rem;">Soho Squared - InMoment</h4>
+          <p style="font-size: 1.1rem;">Customer Experience Analyst<br><strong>Oct 2022 – Jun 2024</strong></p>
+          <button class="btn learn-more" onclick="openModal('soho')">Learn more</button>
+        </div>
+        <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">   
+          <img src="img/colgate.png" alt="Colgate-Palmolive">
+          <h4 style="font-size: 2rem; color:white;">Colgate-Palmolive</h4>
+          <p style="font-size: 1.1rem; color:white;">New Products Analyst Intern<br><strong>Apr 2021 – Apr 2022</strong></p>
+          <button class="btn learn-more" onclick="openModal('colgate')">Learn more</button>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section" style="padding: 4rem 0;">
+        <h2 class="section-title">About Me</h2>
+        <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
+          <div class="edu-exp-card" style="background: linear-gradient(to bottom, #fce4f2, #ffffff); text-align: center; border-radius: 0;">
+            <img src="img/cuentamundos.png" alt="CuentaMundos">
+            <h4 style="font-size: 2rem;">National Youth Award with Cuenta Mundos</h4>
+            <p style="font-size: 1.1rem;">Initiative to increase children's literacy rates in Oaxaca.</p>
+          </div>
+          <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+            <img src="img/quepario.png" alt="QuePario">
+            <h4 style="font-size: 2rem;">Member of QueParió!</h4>
+            <p style="font-size: 1.1rem;">Comedy YouTube channel with over 3M subscribers.</p>
+          </div>
+          <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+            <img src="img/cc.png" alt="CaminosCruzados" >
+            <h4 style="font-size: 2rem;">Founder of Caminos Cruzados</h4>
+            <p style="font-size: 1.1rem;">Personal music project with over 50K followers.</p>
+          </div>
+          <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">
+            <img src="img/llantitec.png" alt="Llantitec" style="max-width:350px; !important">
+            <h4 style="font-size: 2rem; color:white;">Llantitec</h4>
+            <p style="font-size: 1.1rem; color:white;">Passionate advocate for family tire business in Mexico.</p>
+          </div>
         </div>
     </section>
 
-    <main class="max-w-5xl mx-auto mt-10 space-y-10">
-        <section id="education" class="content-box">
-            <h3 class="text-3xl">Education</h3>
-            <p class="mt-4"></p>
-            <img src="img/duke.jpg" alt="Duke University" class="w-full h-40 object-cover rounded-lg mb-4">
-            <h4 class="mt-4 font-semibold">Duke University, The Fuqua School of Business</h4>
-            <p>Master of Science in Quantitative Management: Business Analytics <i>(May 2025)</i></p>
-            <p>Specialized in data science, machine learning, AI, and data visualization.</p>
-            <p class="mt-4"></p>
-            <div class="section-divider"></div>
-            <img src="img/up.jpg" alt="Universidad Panamericana" class="w-full h-40 object-cover rounded-lg mb-4">
-            <h4 class="mt-4 font-semibold">Universidad Panamericana</h4>
-            <p>Bachelor of Business Administration <i>(December 2022)</i></p>
-            <p>Completed study abroad in Digital Marketing and Behavioral Economics.</p>
-        </section>
+    <section id="skills" class="section skills-section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid-table">
+        <div class="skill-card">
+          <h3>Advanced Excel</h3>
+          <p>Tree Plan, Pivot Tables, VLOOKUP, VBA</p>
+        </div>
+        <div class="skill-card">
+          <h3>Programming & Tools</h3>
+          <p>Python (Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow), SQL, R (Tidyverse), GitHub</p>
+        </div>
+        <div class="skill-card">
+          <h3>Data Visualization</h3>
+          <p>Tableau, Matplotlib, Seaborn, Power BI</p>
+        </div>
+        <div class="skill-card">
+          <h3>Machine Learning & Modeling</h3>
+          <p>Linear Regression, Logistic Regression, Neural Networks (CNNs, RNNs, LLMs), Random Forest, K-means, PCA, A/B Testing, LLM prompts (GPT-4, LLaMa, DeepSeek R1)</p>
+        </div>
+        <div class="skill-card">
+          <h3>Other Software & Languages</h3>
+          <p>HTML, CSS, Google Analytics, Java, Jira</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-        <section id="experience" class="content-box">
-            <h3 class="text-3xl">Experience</h3>
-            <p class="mt-4"></p>
-            <img src="img/soho.jpg" alt="Professional Teamwork" class="w-full h-40 object-cover rounded-lg mb-4">
-            <h4 class="mt-4 font-semibold">Soho Squared - InMoment</h4>
-            <p>Data Analyst - Customer Experience Application Specialist <i>(Oct 2022 - Jun 2024)</i></p>
-            <p>Implementation of customer experience programs in companies across multiple sectors such as technology, automotive, and healthcare.</p>
-            <p class="mt-4"></p>
-            <div class="section-divider"></div>
-            <img src="img/colgate.png" alt="Professional Teamwork" class="w-full h-40 object-cover rounded-lg mb-4">
-            <h4 class="mt-4 font-semibold">Colgate-Palmolive</h4>
-            <p>New Products Analyst Intern <i>(Apr 2021 - Apr 2022)</i></p>
-            <p>Developed automation tools and ensured regulatory compliance for product launches.</p>
-        </section>
+  <footer class="footer">
+    <p>&copy; 2025 Jose Antonio Ramirez Marquez</p>
+  </footer>
 
-        <section id="skills" class="content-box">
-            <h3 class="text-3xl">Technical Skills</h3>
+  <script>
+    // Apple-style Carousel JS - Updated for center-focused interaction
 
-            <h4 class="text-lg font-semibold mt-4">Programming & Tools</h4>
-            <div class="mt-3 flex flex-wrap gap-3">
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">Python</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">Pandas</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">NumPy</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">TensorFlow</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">PyTorch</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">SQL</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">R</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">Tidyverse</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">Google Analytics</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">Java</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">HTML</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">CSS</span>
-                <span class="tagi bg-blue-100 text-blue-600 px-4 py-2 rounded-lg text-sm font-semibold">JavaScript</span>
-            </div>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    const dots = document.querySelectorAll('.carousel-indicators .dot');
+    let currentIndex = 0;
 
-            <div class="section-divider"></div>
+    function updateCarousel(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        dots[i].classList.remove('active');
+      });
+      slides[index].classList.add('active');
+      dots[index].classList.add('active');
 
-            <h4 class="text-lg font-semibold mt-4">Data Visualization</h4>
-            <div class="mt-3 flex flex-wrap gap-3">
-                <span class="tagi bg-green-100 text-green-600 px-4 py-2 rounded-lg text-sm font-semibold">Tableau</span>
-                <span class="tagi bg-green-100 text-green-600 px-4 py-2 rounded-lg text-sm font-semibold">Matplotlib</span>
-                <span class="tagi bg-green-100 text-green-600 px-4 py-2 rounded-lg text-sm font-semibold">Seaborn</span>
-            </div>
+      const slideWidth = slides[0].getBoundingClientRect().width;
+      const moveAmount = slideWidth * index;
+      track.style.transform = `translateX(-${moveAmount}px)`;
+    }
 
-            <div class="section-divider"></div>
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel(currentIndex);
+      });
+    });
 
-            <h4 class="text-lg font-semibold mt-4">Machine Learning & Modeling</h4>
-            <div class="mt-3 flex flex-wrap gap-3">
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">Linear Regression</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">Logistic Regression</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">Neural Networks (CNNs, RNNs)</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">Random Forest</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">K-means Clustering</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">PCA (Principal Component Analysis)</span>
-                <span class="tagi bg-yellow-100 text-yellow-600 px-4 py-2 rounded-lg text-sm font-semibold">A/B Testing</span>
-            </div>
+    slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        currentIndex = index;
+        updateCarousel(currentIndex);
+      });
+    });
 
-            <div class="section-divider"></div>
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(currentIndex);
+    }, 8000);
 
-            <h4 class="text-lg font-semibold mt-4">Advanced Excel</h4>
-            <div class="mt-3 flex flex-wrap gap-3">
-                <span class="tagi bg-purple-100 text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold">Tree Plan</span>
-                <span class="tagi bg-purple-100 text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold">Pivot Tables</span>
-                <span class="tagi bg-purple-100 text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold">VLOOKUP</span>
-                <span class="tagi bg-purple-100 text-purple-600 px-4 py-2 rounded-lg text-sm font-semibold">VBA (Visual Basic for Applications)</span>
-            </div>
-        </section>
+    window.addEventListener('resize', () => {
+      updateCarousel(currentIndex);
+    });
 
-    </main>
+    updateCarousel(currentIndex);
 
-    <footer class="bg-gray-900 text-white text-center py-6 mt-16">
-        <p>&copy; 2025 Jose Antonio Ramirez Marquez</p>
-    </footer>
-    <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    window.scrollTo({
-                        top: targetSection.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = 80; // Adjust this if you have a fixed navbar
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+        window.scrollTo({
+          top,
+          behavior: 'smooth'
         });
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.secnav').forEach(anchor => {
-                anchor.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                        window.scrollTo({
-                            top: targetSection.offsetTop - 50, // Adjust offset for better positioning
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
+      }
+    });
+  });
 
-    </script>
+  function openModal(id) {
+    document.getElementById(`modal-${id}`).style.display = 'block';
+  }
+  function closeModal(id) {
+    document.getElementById(`modal-${id}`).style.display = 'none';
+  }
+  window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+  }
+  </script>
 </body>
 </html>
