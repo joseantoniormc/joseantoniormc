@@ -40,9 +40,17 @@
     <div class="carousel apple-carousel">
       <div class="carousel-track">
         <div class="carousel-slide active">
+          <img src="img/mktint.jpg" alt="Tire Classifier" />
+          <div class="carousel-caption">
+            <h4>Gaming Product Strategy</h4>
+            <p>Player insights and product decisions through Python analysis  </p>
+            <button class="btn learn-more-car" onclick="openModal('mktint')">Learn more</button>
+          </div>
+        </div>
+        <div class="carousel-slide">
           <img src="img/tire_classifier.jpg" alt="Tire Classifier" />
           <div class="carousel-caption">
-            <h1>Tire Condition Classifier</h1>
+            <h4>Tire Condition Classifier</h4>
             <p>Smart classification powered by CNNs and VGG16</p>
             <a href="https://github.com/joseantoniormc/Tire_Condition_Classifier_CNN" target="_blank">GitHub Repository</a>
           </div>
@@ -50,7 +58,7 @@
         <div class="carousel-slide">
           <img src="img/flight_delay.jpg" alt="Flight Delay Prediction" />
           <div class="carousel-caption">
-            <h1>Flight Delay Prediction</h1>
+            <h4>Flight Delay Prediction</h4>
             <p>Predict late flights using machine learning</p>
             <a href="https://github.com/joseantoniormc/flight_delay_prediction" target="_blank">GitHub Repository</a>
           </div>
@@ -58,7 +66,7 @@
         <div class="carousel-slide">
           <img src="img/sentiment_analysis.jpg" alt="Sentiment RNN" />
           <div class="carousel-caption">
-            <h1>Sentiment Analysis</h1>
+            <h4>Sentiment Analysis</h4>
             <p>Using RNNs to understand emotions in reviews</p>
             <a href="https://github.com/joseantoniormc/Sentimient_Analysis" target="_blank">GitHub Repository</a>
           </div>
@@ -66,6 +74,7 @@
       </div>
       <div class="carousel-indicators">
         <span class="dot active"></span>
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
@@ -76,6 +85,59 @@
   <main>
     <!-- POSTS -->
     <!-- MODAL TEMPLATE -->
+        <div id="modal-mktint" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('mktint')">&times;</span>
+            <h2 class="modal-title">Marketing Intelligence in the Gaming Industry</h2>
+            <img src="img/mktint.jpg" alt="Fuqua Classroom" class="modal-img">
+            <p>
+              My capstone for the <strong>Marketing Intelligence course at Fuqua</strong>. I’m proud to say it was a deep dive into product strategy, consumer segmentation, and predictive modeling in the gaming industry.
+              I tackled a real-world scenario: <em>choosing the most promising game for a developer to acquire in a competitive RPG market</em>. To make the call, I combined both business and technical methods to create a data-driven recommendation.
+            </p>
+              <p>  <strong>·</strong> Built a <strong>linear regression model in Python</strong> to impute missing price sensitivity data and forecast optimal price points</p>
+              <p>  <strong>·</strong> Used <strong>PCA and Factor Analysis</strong> to reduce survey dimensionality and uncover the core motivations behind gamer behavior</p>
+              <p>  <strong>·</strong> Clustered player segments using <strong>k-means</strong> and interpreted their affinities using advanced cross-tab and regression analyses</p>
+              <p>  <strong>·</strong> Targeted personas based on segment behavior and market potential to craft a <strong>high-ROI strategy</strong></p>
+            <div class="viz">
+              <h2>PCA Explained Variance</h2>
+              <img style= "max-height: 300px;"src="img/pcaan.jpg" alt="PCA Variance Explained">
+            </div>
+
+            <div class="viz">
+              <h2>Gamer Personas</h2>
+              <div class="grid">
+                <div class="persona">
+                  <h3>🌟 Tactical Challenge Seekers</h3>
+                  <p>Mastery, planning, combat</p>
+                </div>
+                <div class="persona">
+                  <h3>🏆 Completionist Collectors</h3>
+                  <p>Achievements, progression</p>
+                </div>
+                <div class="persona">
+                  <h3>🎨 Casual Experimenters</h3>
+                  <p>Customization, sandbox play</p>
+                </div>
+                <div class="persona">
+                  <h3>🔫 Competitive Action Fans</h3>
+                  <p>FPS, fast-paced combat</p>
+                </div>
+                <div class="persona">
+                  <h3>🏛️ Story-Driven Roleplayers</h3>
+                  <p>Narrative, character development</p>
+                </div>
+                <div class="persona">
+                  <h3>🌍 Exploration & Sandbox Players</h3>
+                  <p>Open-world, creative mode</p>
+                </div>
+              </div>
+            </div>
+            <p>
+              What I valued most was the challenge of transforming raw data into <strong>clear strategic guidance</strong>, the kind that drives confident investment decisions.
+            </p>
+          </div>
+        </div>
+
         <div id="modal-duke" class="modal">
           <div class="modal-content">
             <span class="close" onclick="closeModal('duke')">&times;</span>
