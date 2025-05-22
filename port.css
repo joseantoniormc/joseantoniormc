@@ -493,12 +493,8 @@ html {
     white-space: normal;
   }
 
-  .carousel-caption h1 {
-    font-size: 1.25rem;
-  }
-
   .carousel-caption p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 
   .carousel-caption a {
@@ -515,7 +511,7 @@ html {
     grid-template-columns: repeat(1, 1fr) !important;
   }
   .carousel-caption h4 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
   }
