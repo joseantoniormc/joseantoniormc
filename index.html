@@ -257,6 +257,90 @@
           </div>
         </div>
 
+        <div id="modal-volunteering" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('volunteering')">&times;</span>
+            <h2 class="modal-title">Volunteering with UP and Cuenta Mundos</h2>
+            <img src="img/award.jpg" alt="CuentaMundosAward" class="modal-img">
+            <p>
+             Throughout my life, I’ve had the opportunity to collaborate with various groups in volunteer activities: collecting Tetra Pak containers to build houses, supporting children in foster homes, and gathering supplies for those affected by the 2017 earthquake in Mexico City. However, my two greatest passions have always been related to education.
+            </p>
+            <p>
+              While studying at <strong>Universidad Panamericana</strong>, I had the chance to tutor middle school students in mathematics, algebra, and geometry, students who were struggling with these subjects. I’ve always disagreed with the notion that math is only for those who are <em>“naturally talented”</em> at it, and the students I worked with are proof that this isn't true. Many of them, who were at risk of failing, were able to catch up and even improve their relationship with the subject.
+            </p>
+            <p>
+              When I was a bit younger, I had the opportunity to lead <strong>Cuenta Mundos</strong>, a youth-led organization in Oaxaca dedicated to increasing literacy rates in the state by fostering a love of reading among children through playful, engaging activities. The work I carried out alongside my friends, with the support of Professor Enriqueta Pérez, earned us the <strong>National Youth Award</strong>, the highest honor granted by the Mexican government to young people for their social contributions.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/imjuve.jpg" alt="imjuve">
+              </div>
+              <div class="profile-item">
+                <img src="img/cclogo.png" alt="CuentaMundos">
+              </div>
+              <div class="profile-item">
+                <img src="img/uplogo.jpg" alt="UPlogo">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-qp" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('qp')">&times;</span>
+            <h2 class="modal-title">My life as content creator</h2>
+            <img src="img/qpban.jpg" alt="QuePario" class="modal-img">
+            <p>
+             For six years, alongside my academic education, I was part of a YouTube channel called QuePario! a project that began as a way for friends to pass the time by making comedy sketches, parodies, and musicals, but which soon grew into a channel with over 3 million subscribers. In this team, I had the chance to collaborate with incredibly talented people, such as <strong>Ron Hernández (director), Renata Vaca (renowned actress), and Alex Soto (singer and songwriter)</strong>, all of whom inspired me to become a little more creative every day.
+            </p>
+            <p>
+              Being part of QP! meant living a more public life than I had ever imagined—traveling across Mexico to attend events, perform shows, and take part in meet-and-greets.
+            </p>
+            <p>
+              I’ll never deny how much I loved being part of that team, and how all the members feel like family to me. But at some point, I had to step away from a project that demanded 120% of me in order to pursue my own dreams.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/ron-roneos.jpg" alt="Ron">
+                <p class="profile-name"><em>Ron Hernández</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/reny.jpg" alt="Reny">
+                <p class="profile-name"><em>Renata Vaca</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/alexsoto.jpeg" alt="Alex Soto">
+                <p class="profile-name"><em>Alex Soto</em></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="modal-cc" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('cc')">&times;</span>
+            <h2 class="modal-title">Music all the way...</h2>
+            <img src="img/ccban.jpg" alt="Caminos Cruzados" class="modal-img">
+            <p>
+             I've always had a passion for music, and even today, I love spending my free time singing or playing the guitar. That’s how Caminos Cruzados was born, a project where I could explore my musical and production skills, and over the years, build a community of 50,000 people interested in the project. It also gave me the chance to compose my own songs and upload some of my recordings to Spotify.
+            </p>
+            <p>
+              Although I haven’t been able to record or share as much content lately as I’d like, I would never say this project is over. It’s one of those creative outlets you always return to... with fresh ideas.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/cclogo.jpg" alt="CaminosLogo">
+              </div>
+              <div class="profile-item">
+                <img src="img/spotify.png" alt="spotify">
+              </div>
+              <div class="profile-item">
+                <img src="img/youtube.png" alt="YouTube">
+              </div>
+            </div>
+          </div>
+        </div>
+
     <section id="education" class="section">
       <div class="section-inner">
         <h2 class="section-title">Education</h2>
@@ -302,18 +386,21 @@
         <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
           <div class="edu-exp-card" style="background: linear-gradient(to bottom, #fce4f2, #ffffff); text-align: center; border-radius: 0;">
             <img src="img/cuentamundos.png" alt="CuentaMundos">
-            <h4 style="font-size: 2rem;">National Youth Award with Cuenta Mundos</h4>
-            <p style="font-size: 1.1rem;">Initiative to increase children's literacy rates in Oaxaca.</p>
+            <h4 style="font-size: 2rem;">Volunteering</h4>
+            <p style="font-size: 1.1rem;">Initiatives to increase children's literacy rates in Oaxaca.</p>
+            <button class="btn learn-more" onclick="openModal('volunteering')">Learn more</button>
           </div>
           <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
             <img src="img/quepario.png" alt="QuePario">
             <h4 style="font-size: 2rem;">Member of QueParió!</h4>
             <p style="font-size: 1.1rem;">Comedy YouTube channel with over 3M subscribers.</p>
+            <button class="btn learn-more" onclick="openModal('qp')">Learn more</button>
           </div>
           <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
             <img src="img/cc.png" alt="CaminosCruzados" >
             <h4 style="font-size: 2rem;">Founder of Caminos Cruzados</h4>
             <p style="font-size: 1.1rem;">Personal music project with over 50K followers.</p>
+            <button class="btn learn-more" onclick="openModal('cc')">Learn more</button>
           </div>
           <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">
             <img src="img/llantitec.png" alt="Llantitec" style="max-width:350px; !important">
