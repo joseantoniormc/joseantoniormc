@@ -10,37 +10,89 @@
 <body>
   <header id="header" class="apple-hero-banner">
     <nav class="apple-nav">
-      <ul>
+      <div class="nav-toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
         <li><a href="#header">Home</a></li>
-        <li><a href="#carousel">Projects</a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="#carousel">Featured</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#about">About Me</a></li>
         <li><a href="#skills">Skills</a></li>
       </ul>
     </nav>
 
+
+    <div id="modal-resume" class="modal">
+      <div class="modal-content" style="max-width: 1000px;">
+        <span class="close" onclick="closeModal('resume')">&times;</span>
+        <h2 class="modal-title">My Resume</h2>
+        <iframe 
+          src="resumejarm.pdf" 
+          width="100%" 
+          height="600px" 
+          style="border: none;"
+          title="Resume PDF Preview"
+        ></iframe>
+        <div style="text-align: center; margin-top: 1rem;">
+          <a href="resumejarm.pdf" target="_blank" rel="noopener noreferrer" class="btn learn-more">Download PDF</a>
+        </div>
+      </div>
+    </div>
+
+
     <div class="banner-content">
       <div class="text-block">
         <h1>Jose <strong>Antonio Ramirez</strong> Marquez</h1>
-        <p class="tagline">Data Analytics | Data Science | AI | Business Analytics</p>
+        <p class="tagline">
+          Business Analyst turning data into decisions.
+          I help product and operations teams define the right KPIs, build self‑serve reporting, and
+          ship customer‑obsessed improvements.
+        </p>
+
         <div class="hero-links">
           <a href="mailto:jose.ramirezmarquez@duke.edu" title="Email"><img src="img/correo-electronico.png" alt="email" /></a>
           <a href="https://www.linkedin.com/in/joseantoniorm/" target="_blank" title="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn" /></a>
           <a href="https://github.com/joseantoniormc" target="_blank" title="GitHub"><img src="img/github.png" alt="GitHub" /></a>
         </div>
+
+        <div class="hero-ctas">
+          <a class="btn-hero-light" href="https://www.linkedin.com/in/joseantoniorm/" target="_blank">Invite to a Call</a>
+          <a class="btn-hero-light" href="/blog/index.html">Check the Blog</a>
+        </div>
       </div>
+
       <div class="image-block">
         <img src="img/jarm-hero.png" alt="Jose Antonio Portrait" />
       </div>
-    </div>
+
   </header>
 
   <section id="carousel" class="hero-carousel-container">
-    <h2 class="section-title">Featured Projects</h2>
+    <h2 class="section-title">Featured</h2>
     <div class="carousel apple-carousel">
       <div class="carousel-track">
         <div class="carousel-slide active">
+          <img src="img/dash-pencil.png" alt="Turning Data into Decisions" style="height:100%"/>
+          <div class="carousel-caption">
+            <h4>Data Visualization Beyond Tableau and Power BI</h4>
+            <p>If you think data visualization begins and ends with Tableau or Power BI, you’re already behind.</p>
+            <a href="/blog/post.html?slug=data-viz-beyond" target="_blank">Read More</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
+          <img src="img/data-dec.png" alt="Turning Data into Decisions" style="height:100%"/>
+          <div class="carousel-caption">
+            <h4>What is Turning Data into Decisions?</h4>
+            <p>Most companies don’t fail because they lack data, they fail because they don’t know how to turn it into real decisions.</p>
+            <a href="/blog/post.html?slug=data-into-decisions" target="_blank">Read More</a>
+          </div>
+        </div>
+        <div class="carousel-slide">
           <img src="img/mktint.jpg" alt="Tire Classifier" />
           <div class="carousel-caption">
             <h4>Gaming Product Strategy</h4>
@@ -75,6 +127,8 @@
       </div>
       <div class="carousel-indicators">
         <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -194,6 +248,66 @@
             </div>
             <p>
           </div>
+        </div>
+
+        <div id="modal-mktduke" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('mktduke')">&times;</span>
+            <h2 class="modal-title">Marketing Intelligence: Driving Engagement Strategy for Duke Programs</h2>
+            <img src="img/fuqua-duke.jpg" alt="sohosquared" class="modal-img">
+            <p>
+              The Fuqua Marketing Intelligence team, responsible for advising program leadership, was constrained by the limits of the platform. While survey data from EMBA students was rich, the team lacked the tools to: <br>• Analyze thousands of open-text responses beyond surface-level themes <br>• Build dynamic cross-tabs across cohorts without hours of manual work <br>• Run advanced statistical tests to identify why satisfaction was changing, not just what scores looked like
+            </p>
+            <p>
+              I designed and delivered an analytical layer by:
+              <br>• Building a Python pipeline to clean, code, and model survey data, isolating the drivers of engagement.
+              <br>• Developing an interactive, <strong>self-service dashboard</strong> that allowed leadership to cross-tabulate by cohort, topic, and metric in real time, using Python, Dash and Plotly, without expensive BI licenses.
+            </p>
+            <div class="profile-pics">
+              <div class="profile-item">
+                <img src="img/python.webp" alt="python">
+                <p class="profile-name"><em>Python</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/pandas.png" alt="pandas">
+                <p class="profile-name"><em>Pandas</em></p>
+              </div>
+              <div class="profile-item">
+                <img src="img/plotly.png" alt="plotly">
+                <p class="profile-name"><em>Plotly</em></p>
+              </div>
+            </div>
+            <p>
+              <strong>Impact</strong>
+              <br>• Strategic Insight: <strong>Identified the top drivers of dissatisfaction</strong>. Program leadership acted on these.
+              <br>• Efficiency: Cut turnaround time for complex ad-hoc requests from days to minutes.
+              <br>• Capability Building: Extended the life of the school’s investment by giving the team a maintainable Python-based solution they now use independently.
+            </p>
+          </div>
+        </div>
+        <div id="modal-llantitec" class="modal">
+          <div class="modal-content">
+            <span class="close" onclick="closeModal('llantitec')">&times;</span>
+            <h2 class="modal-title">Pricing & Operations Strategy: Driving Profitability for a Tire Distributor</h2>
+            <img src="img/llantitec-office.webp" alt="llantitec" class="modal-img">
+             <p><strong>Problem</strong><br>
+                Llantitec, a regional tire distributor, was facing declining margins and inefficient pricing decisions. 
+                With over 3,000 SKUs across multiple brands, leadership lacked visibility into competitive pricing trends 
+                and had no systematic way to align costs, inventory, and sales performance with pricing strategy.
+              </p>
+              <p>
+              <strong>Action</strong><br>
+              As a Business Analyst Intern, I introduced a structured approach to pricing and operations by:
+                <br>• Conducting market intelligence through competitive web scraping and in-person distributor visits to benchmark SKU-level prices.
+                <br>• Designing a dynamic R-based pricing model that integrated cost, inventory, competitor pricing, and historical sales, automating monthly updates.
+                <br>• Partnering with operations leadership to standardize decision rules around margin thresholds and competitive positioning.
+              </p>
+              <p>
+              <strong>Impact</strong><br>
+                <br>• <strong>Profitability:</strong> Boosted gross profit by 7% within six months by correcting underpriced SKUs and capitalizing on high-demand categories.
+                <br>• <strong>Efficiency:</strong> Reduced manual pricing analysis by 10+ hours per week, enabling the team to focus on negotiation and customer service.
+                <br>• <strong>Scalability:</strong> Created a repeatable framework that became the distributor’s standard approach to monthly pricing reviews.</p>
+            </div>
         </div>
 
         <div id="modal-soho" class="modal">
@@ -341,6 +455,37 @@
             </div>
           </div>
         </div>
+    <section id="experience" class="section" style="padding: 4rem 0;">
+      <h2 class="section-title">Experience</h2>
+      <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
+        <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">   
+          <img src="img/Duke_University.png" alt="Duke University">
+          <h4 style="font-size: 2rem; color:white;">The Fuqua School of Business</h4>
+          <p style="font-size: 1.1rem; color:white;">Marketing Intelligence Consultant<br><strong>Jul 2025 – Aug 2025</strong></p>
+          <button class="btn learn-more" onclick="openModal('mktduke')">Learn more</button>
+        </div>
+        <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
+          <img src="img/tinmoment.png" alt="Soho Squared" style="max-width:100%; !important">
+          <h4 style="font-size: 2rem;">Soho Squared - InMoment</h4>
+          <p style="font-size: 1.1rem;">Customer Experience & Data Analytics<br><strong>Oct 2022 – Jun 2024</strong></p>
+          <button class="btn learn-more" onclick="openModal('soho')">Learn more</button>
+        </div>
+      </div>
+      <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
+        <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">   
+          <img src="img/colgate.png" alt="Colgate-Palmolive">
+          <h4 style="font-size: 2rem;">Colgate-Palmolive</h4>
+          <p style="font-size: 1.1rem;">Product Launch & Operations<br><strong>Apr 2021 – Apr 2022</strong></p>
+          <button class="btn learn-more" onclick="openModal('colgate')">Learn more</button>
+        </div>
+        <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">
+          <img src="img/logo-llantitec.png" alt="Llantitec" style="max-width:100%; !important">
+          <h4 style="font-size: 2rem; color:white;">Llantitec <i style="font-size: 1rem; color:white;"> Tire Distributor</i></h4>
+          <p style="font-size: 1.1rem; color:white;">Pricing & Operations Strategy Intern<br><strong>Jun 2020 — Dec 2020</strong></p>
+          <button class="btn learn-more" onclick="openModal('llantitec')">Learn more</button>
+        </div>
+      </div>
+    </section>
 
     <section id="education" class="section">
       <div class="section-inner">
@@ -359,25 +504,6 @@
           <h4 style="font-size: 2rem;">Universidad Panamericana</h4>
           <p style="font-size: 1.1rem;">Bachelor of Business Administration<br><strong>Graduated December 2022</strong></p>
           <button class="btn learn-more" onclick="openModal('up')">Learn more</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section" style="padding: 4rem 0;">
-      <h2 class="section-title">Experience</h2>
-      <div class="edu-exp-grid" style="grid-template-columns: 1fr 1fr; padding: 0;">
-        <div class="edu-exp-card" style="background-color: #edf0f1; text-align: center; border-radius: 0;">
-          <img src="img/tinmoment.png" alt="Soho Squared" style="max-width:100%; !important">
-          <h4 style="font-size: 2rem;">Soho Squared - InMoment</h4>
-          <p style="font-size: 1.1rem;">Customer Experience Analyst<br><strong>Oct 2022 – Jun 2024</strong></p>
-          <button class="btn learn-more" onclick="openModal('soho')">Learn more</button>
-        </div>
-        <div class="edu-exp-card" style="background-color: #212121; text-align: center; border-radius: 0;">   
-          <img src="img/colgate.png" alt="Colgate-Palmolive">
-          <h4 style="font-size: 2rem; color:white;">Colgate-Palmolive</h4>
-          <p style="font-size: 1.1rem; color:white;">New Products Analyst<br><strong>Apr 2021 – Apr 2022</strong></p>
-          <button class="btn learn-more" onclick="openModal('colgate')">Learn more</button>
-
         </div>
       </div>
     </section>
@@ -410,27 +536,28 @@
       <h2 class="section-title">Technical Skills</h2>
       <div class="skills-grid-table">
         <div class="skill-card">
-          <h3>Advanced Excel</h3>
-          <p>Tree Plan, Pivot Tables, VLOOKUP, VBA</p>
+          <h3>Core Analyst</h3>
+          <p>SQL • Excel (VBA, Pivots) • Tableau/Power BI • KPI design • A/B testing • Requirements</p>
         </div>
         <div class="skill-card">
-          <h3>Programming & Tools</h3>
-          <p>Python (Pandas, NumPy, Scikit-learn, PyTorch, TensorFlow), SQL, R (Tidyverse), GitHub</p>
+          <h3>Automation</h3>
+          <p>Python (Pandas/NumPy) • ETL • Data quality</p>
         </div>
         <div class="skill-card">
-          <h3>Data Visualization</h3>
-          <p>Tableau, Matplotlib, Seaborn, Power BI</p>
+          <h3>Communication</h3>
+          <p>Stakeholder mgmt • Data storytelling • Exec dashboards</p>
         </div>
         <div class="skill-card">
           <h3>Machine Learning & Modeling</h3>
-          <p>Linear Regression, Logistic Regression, Neural Networks (CNNs, RNNs, LLMs), Random Forest, K-means, PCA, A/B Testing, LLM prompts (GPT-4, LLaMa, DeepSeek R1)</p>
+          <p>Linear Regression • Logistic Regression • Neural Networks (CNNs, RNNs, LLMs) • Random Forest • K-means • PCA • A/B Testing • LLM prompts (GPT-4, LLaMa, DeepSeek R1)</p>
         </div>
         <div class="skill-card">
           <h3>Other Software & Languages</h3>
-          <p>HTML, CSS, Google Analytics, Java, Jira</p>
+          <p>HTML • CSS • Google Analytics • Java • Jira</p>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
@@ -438,70 +565,77 @@
   </footer>
 
   <script>
-    // Apple-style Carousel JS - Updated for center-focused interaction
+    function toggleNav() {
+    const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+  }
+  document.addEventListener("DOMContentLoaded", function () {
 
+    // Carousel logic
     const track = document.querySelector('.carousel-track');
-    const slides = Array.from(track.children);
+    const slides = Array.from(document.querySelectorAll('.carousel-slide'));
     const dots = document.querySelectorAll('.carousel-indicators .dot');
     let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
 
+    // Update Carousel
     function updateCarousel(index) {
       slides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('active', i === index);
       });
-      slides[index].classList.add('active');
-      dots[index].classList.add('active');
-
       const slideWidth = slides[0].getBoundingClientRect().width;
-      const moveAmount = slideWidth * index;
-      track.style.transform = `translateX(-${moveAmount}px)`;
+      if (index == 1){
+      track.style.transform = `translateX(-${(slideWidth) * index}px)`;}else{
+        track.style.transform = `translateX(-${(slideWidth*1.2) * index}px)`;
+      }
+      currentIndex = index;
     }
 
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel(currentIndex);
-      });
-    });
-
-    slides.forEach((slide, index) => {
-      slide.addEventListener('click', () => {
-        currentIndex = index;
-        updateCarousel(currentIndex);
-      });
-    });
-
+    // Auto-slide every 10 seconds
     setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      updateCarousel(currentIndex);
-    }, 8000);
+      const nextIndex = (currentIndex + 1) % slides.length;
+      updateCarousel(nextIndex);
+    }, 10000);
 
-    window.addEventListener('resize', () => {
-      updateCarousel(currentIndex);
+    // Touch gestures
+    track.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
     });
 
-    updateCarousel(currentIndex);
-
-    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        const offset = 80; // Adjust this if you have a fixed navbar
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-
-        window.scrollTo({
-          top,
-          behavior: 'smooth'
-        });
+    track.addEventListener('touchend', e => {
+      endX = e.changedTouches[0].clientX;
+      if (endX < startX - 50) {
+        // Swipe left
+        updateCarousel((currentIndex + 1) % slides.length);
+      } else if (endX > startX + 50) {
+        // Swipe right
+        updateCarousel((currentIndex - 1 + slides.length) % slides.length);
       }
     });
+
+    // Click Dots
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => updateCarousel(i));
+    });
+
+    // Click Slide to center
+    slides.forEach((slide, i) => {
+      slide.addEventListener('click', () => updateCarousel(i));
+    });
+
+    // Recalculate on resize
+    window.addEventListener('resize', () => updateCarousel(currentIndex));
+    updateCarousel(currentIndex);
   });
+
+  // Modal Functions
 
   function openModal(id) {
     document.getElementById(`modal-${id}`).style.display = 'block';
   }
+
   function closeModal(id) {
     document.getElementById(`modal-${id}`).style.display = 'none';
   }
@@ -513,7 +647,20 @@
       }
     });
   }
-  </script>
+
+  // Smooth scrolling for nav
+  document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
-
