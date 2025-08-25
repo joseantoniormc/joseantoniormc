@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Artículo</title>
+  <meta name="description" content="Artículo del blog">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../port.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Blog">
+  <meta property="og:description" content="Notas y guías rápidas.">
+</head>
+<body>
+  <nav class="apple-nav">
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="blog-container">
+    <article class="post prose" id="post">
+      <h1 id="post-title">Cargando…</h1>
+
+      <!-- Author / meta / share -->
+      <div class="post-meta-bar">
+        <div class="author">
+          <a href="/"><img id="author-avatar" src="../img/jarmprofile.png" alt="Antonio Ramirez" class="author-avatar"></a>
+          <div class="author-info">
+            <div class="author-name"><a href="/" style="text-decoration: none; color: black;">Antonio Ramirez</a></div>
+            <div class="author-date"><span id="post-date">—</span></div>
+          </div>
+        </div>
+
+        <div class="share">
+          <button class="share-btn" id="share-copy" title="Copiar enlace">
+            <i class="fa-solid fa-link"></i>
+          </button>
+          <a class="share-btn" id="share-ln"  title="Compartir en LinkedIn" target="_blank" rel="noopener">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a class="share-btn" id="share-tw"  title="Compartir en X" target="_blank" rel="noopener">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+          <a class="share-btn" id="share-wa"  title="Compartir en WhatsApp" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div> <!-- ✅ CLOSE post-meta-bar -->
+
+      <!-- Hero -->
+      <img id="post-hero" class="hero" alt="" style="display:none;">
+
+      <!-- Body -->
+      <div id="post-body"></div>
+    </article>
+    <br>
+    <h2 class="section-title">Other Posts</h2>
+    <section id="featured"></section>
+    <section class="latest">
+      <div id="latest" class="card-grid"></div>
+    </section>
+    
+  </main>
+
+  <!-- Markdown renderer -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+  <script>
+    function toggleNav() {
+    const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+  }
+    function getSlug() {
+      const q = new URLSearchParams(location.search).get("slug");
+      if (q) return q;
+      if (location.hash && location.hash.length > 1) return location.hash.slice(1);
+      const parts = location.pathname.split("/").filter(Boolean);
+      const maybe = parts[parts.length - 1];
+      if (maybe && maybe !== "post.html") return maybe;
+      return null;
+    }
+
+    async function loadPost() {
+      const slug = getSlug();
+      const titleEl = document.getElementById("post-title");
+      const metaEl  = document.getElementById("post-date");
+      const bodyEl  = document.getElementById("post-body");
+
+      if (!slug) {
+        titleEl.textContent = "Post no encontrado";
+        bodyEl.innerHTML = "<p>Falta el parámetro <code>slug</code> en la URL.</p>";
+        return;
+      }
+
+      // Load posts.json
+      let list;
+      try {
+        const res = await fetch("posts.json", { cache: "no-store" });
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        list = await res.json();
+      } catch (e) {
+        titleEl.textContent = "No se pudo cargar el índice de posts";
+        bodyEl.innerHTML = "<p>Revisa que <code>/blog/posts.json</code> exista y sea JSON válido.</p>";
+        return;
+      }
+
+      // Find current post
+      let post = list.find(p => p.slug === slug) || list.find(p => p.url && p.url.includes(slug));
+      if (!post) {
+        titleEl.textContent = "Post no encontrado";
+        bodyEl.innerHTML = "<p>El slug <code>" + slug + "</code> no existe en <code>posts.json</code>.</p>";
+        return;
+      }
+
+      // Title/date/hero
+      document.title = post.title;
+      titleEl.textContent = post.title;
+      metaEl.textContent = new Date(post.date).toLocaleDateString() + (post.tags?.length ? " · " + post.tags.join(", ") : "");
+      if (post.hero) {
+        const img = document.getElementById("post-hero");
+        img.src = post.hero;
+        img.style.display = "";
+      }
+
+      // Share links
+      const shareUrl = location.origin + location.pathname + "?slug=" + encodeURIComponent(post.slug);
+      const shareText = encodeURIComponent(post.title);
+      document.getElementById("share-ln").href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl);
+      document.getElementById("share-tw").href = "https://twitter.com/intent/tweet?text=" + shareText + "&url=" + encodeURIComponent(shareUrl);
+      document.getElementById("share-wa").href = "https://api.whatsapp.com/send?text=" + shareText + "%20" + encodeURIComponent(shareUrl);
+      document.getElementById("share-copy").onclick = async () => {
+        try { await navigator.clipboard.writeText(shareUrl); alert("Enlace copiado"); }
+        catch { prompt("Copia el enlace:", shareUrl); }
+      };
+
+      // Markdown body
+      const mdPath = `content/${post.slug}.md`;
+      try {
+        const mdRes = await fetch(mdPath, { cache: "no-store" });
+        if (!mdRes.ok) throw new Error("HTTP " + mdRes.status);
+        const md = await mdRes.text();
+        bodyEl.innerHTML = marked.parse(md);
+      } catch (e) {
+        bodyEl.innerHTML = `<p>No se pudo cargar el contenido en <code>${mdPath}</code>.</p>`;
+      }
+
+
+    }
+
+    document.addEventListener("DOMContentLoaded", loadPost);
+
+  </script>
+  <script src="./feed-post.js" defer></script>
+</body>
+</html>

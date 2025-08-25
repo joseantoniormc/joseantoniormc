@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Blog</title>
+  <meta name="description" content="Articles and notes.">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="/port.css">
+  <link rel="canonical" href="blog/index.html">
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+</head>
+<body>
+  <!-- Same nav structure you use on the homepage -->
+  <nav class="apple-nav">
+    <div class="nav-toggle" onclick="toggleNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/">Portfolio</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+    </ul>
+  </nav>
+
+   <main class="blog-container">
+    <header class="blog-hero">
+      <h1 class="blog-title">Blog</h1>
+      <p class="blog-subtitle">Stories & Strategies in Business Analytics</p>
+    </header>
+
+<div id="search-meta" class="search-meta"></div>
+
+    <!-- Featured (big) -->
+    <section id="featured"></section>
+
+    <!-- Latest grid -->
+    <section class="latest">
+      <h2 class="section-title">All Posts</h2>
+      <div class="blog-search">
+          <input id="search" type="search" placeholder="Search posts…" autocomplete="off" />
+          <button id="search-clear" type="button" aria-label="Clear search">×</button>
+      </div>
+      <div id="latest" class="card-grid"></div>
+    </section>
+  </main>
+
+  <script src="./feed.js" defer></script>
+</body>
+<script>
+    function toggleNav() {
+    const navLinks = document.getElementById("navLinks");
+      navLinks.classList.toggle("show");
+  }
+</script>
+</html>
