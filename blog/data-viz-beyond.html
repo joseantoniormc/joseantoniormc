@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Artículo</title>
+  <meta name="description" content="Artículo del blog">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../port.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Blog">
+  <meta property="og:description" content="Notas y guías rápidas.">
+</head>
+<body>
+  <nav class="apple-nav">
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Portfolio</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="blog-container">
+    <article class="post prose" id="post">
+      <h1 id="post-title">The Power of Data Visualization Beyond Tableau and Power BI</h1>
+        <!-- Author / meta / share -->
+  <div class="post-meta-bar">
+    <div class="author">
+      <a href="/index.html"><img id="author-avatar" src="../img/jarmprofile.png" alt="Antonio Ramirez" class="author-avatar"></a>
+      <div class="author-info">
+        <div class="author-name"><a href="/index.html" style="text-decoration: none; color: black;">Antonio Ramirez</a></div>
+        <div class="author-date"><span id="post-date">25/08/2025</span></div>
+      </div>
+    </div>
+
+    <div class="share">
+      <button class="share-btn" id="share-copy" title="Copiar enlace">
+        <i class="fa-solid fa-link"></i>
+      </button>
+      <a class="share-btn" id="share-ln"  title="Compartir en LinkedIn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="share-btn" id="share-tw"  title="Compartir en X" target="_blank" rel="noopener">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a class="share-btn" id="share-wa"  title="Compartir en WhatsApp" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </div> <!-- ✅ CLOSE post-meta-bar -->
+
+  <img id="post-hero" class="hero" alt="" style="" src="../images/blog/Data-Visualization-Software.jpg">
+
+  <!-- Hero (optional) -->
+  <img id="post-hero" class="hero" alt="" style="display:none;">
+
+  <!-- Body -->
+  <div id="post-body">
+    <h2>A New World Beyond the BI Giants</h2>
+    <p>I’ll admit it: I’m a huge fan of data visualization software. For years, Tableau and Power BI have been the go-to tools for many analysts. Yet I’m genuinely excited to see the market expanding with <strong>more options</strong> every year (options like Google’s Looker).</p>
+    <p>Looker itself has rapidly grown from a challenger to a leader, especially after being acquired by Google. Gartner’s 2025 rankings even place Looker in the Leaders quadrant, alongside Tableau and Power BI (Ahmad &amp; Zinsmeister, 2025; Zubkova, 2025). This validates that the era of only Tableau or Power BI is over.</p>
+    <p>The diversity of BI tools today shows that innovation is thriving. Airbnb, for example, created <strong>Apache Superset</strong> as an alternative to Tableau because of scale and cost limitations (Mukherjee, 2023). Each new platform brings something unique, from semantic modeling in Looker to search-driven analytics in ThoughtSpot.</p>
+
+    <h2>The Multi-Tool Reality of Data Visualization</h2>
+    <p>In practice, one tool is rarely enough. Different projects and constraints lead analysts to explore diverse approaches:</p>
+    <ul>
+      <li><strong>Built-in SaaS dashboards:</strong> Many platforms now offer their own visualization layers. For example, InMoment provides drag-and-drop dashboards for customer experience analytics. Mixpanel and Amplitude offer similar product analytics tools.</li>
+      <li><strong>Custom web dashboards:</strong> Sometimes you need full control. Templates like <strong>AdminLTE</strong> combined with JavaScript libraries like Highcharts allow developers to embed branded, interactive analytics directly into applications.</li>
+      <li><strong>Excel workarounds:</strong> Excel remains ubiquitous, but it can’t truly design interactive dashboards and often results in static, error-prone reports (Team Sigma, 2023). It’s a stopgap, not a scalable visualization strategy.</li>
+    </ul>
+
+    <div class="profile-pics">
+      <div class="profile-item">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT56UaWif4WExJMVtBbj5Vv52Zq2A-Ete4lyw&s" alt="InMoment logo">
+        <p class="profile-name"><em>InMoment</em></p>
+      </div>
+      <div class="profile-item">
+        <img src="https://platform.pyronome.com/images/pattern/215101202122019uJqZdZls.jpg?20250825182102" alt="AdminLTE">
+        <p class="profile-name"><em>AdminLTE</em></p>
+      </div>
+      <div class="profile-item">
+        <img src="https://www.computerworld.com/wp-content/uploads/2025/05/1656594-0-68082700-1748257438-excel-cheat-sheet-primary-2000px.jpg?resize=1536%2C864&amp;quality=50&amp;strip=all" alt="Excel">
+        <p class="profile-name"><em>Excel</em></p>
+      </div>
+    </div>
+
+    <p>For a business analyst, adaptability is key. A modern analytics career requires switching between SaaS dashboards, BI platforms, and code-based solutions depending on the problem at hand.</p>
+
+    <h2>My Case: Going License-Free with Python and Plotly</h2>
+    <p>This is the main reason I wrote this post. While working at Duke’s Fuqua School of Business witht he Marketing Intelligence team, I needed to build a professional, interactive visualization without relying on licenses or external hosting. My solution? <strong>Plotly</strong> with <strong>Dash</strong> in Python.</p>
+    <p>With Plotly, I could clean, analyze, and visualize data in one workflow. Dash then let me assemble those visuals into a browser-ready dashboard, exportable as a simple <code>.html</code> file. The result was a standalone interactive dashboard that required no licenses, servers, or installations.</p>
+    <p>This approach isn’t just for schools. Companies like <strong>Lululemon, Campbell’s, and Colgate</strong> use Dash for analytics, while the <strong>Kansas City Chiefs</strong> apply it to fan engagement and ticket pricing analytics (Plotly, 2025).</p>
+
+    <div class="embed">
+      <iframe
+        src="../images/blog/dashboard_static_d.html"
+        width="100%"
+        height="800"
+        loading="lazy"
+        style="border:0; aspect-ratio: 16 / 9;"
+        sandbox="allow-same-origin allow-scripts"
+        title="Demo preview"
+      ></iframe>
+    </div>
+
+    <h2>Flexibility Comes at a Cost</h2>
+    <p>Of course, code-based solutions come with trade-offs:</p>
+    <ul>
+      <li><strong>User Friendly:</strong> Tableau enables drag-and-drop dashboards quickly. Dash requires Python knowledge, making it harder for non-technical users.</li>
+      <li><strong>Customization:</strong> Dash lets you integrate any model, API, or calculation into a dashboard; flexibility Tableau can’t always match.</li>
+      <li><strong>Performance and Scalability:</strong> One interesting thing I found is that a well-designed Python dashboard can handle surprisingly large data sets quite efficiently, especially if you aggregate or pre-compute as needed. We saw this at Airbnb, where Tableau struggled with huge data and required extracts, whereas their custom solution (Superset) was built to query big data engines directly.</li>
+      <li><strong>Cost:</strong> Tableau and Power BI licenses are expensive, while open-source libraries like Plotly are free.</li>
+      <li><strong>Collaboration:</strong> Sharing Tableau files is simpler for business users, while Python dashboards require Git/code familiarity.</li>
+    </ul>
+    <p>Both approaches have strengths. The skill lies in knowing <strong>when to use each</strong>.</p>
+
+    <h2>Embrace the Variety</h2>
+    <p>The future of data visualization isn’t about picking the “best” tool. It’s about <strong>building a flexible toolkit</strong>. A business analyst might use SQL for queries, Excel for quick charts, Tableau for executive dashboards, and Python for advanced interactive prototypes, sometimes all in the same week.</p>
+    <p>For employers, this adaptability signals problem-solving and initiative. For analysts, it’s a way to stand out in a competitive market. The power of visualization lies not in the tool itself, but in our ability to tell compelling stories with data.</p>
+
+    <h2>References</h2>
+    <ul class="refs">
+      <li>Ahmad, Y., &amp; Zinsmeister, S. (2025, June 18). <em>Google is a Leader in the 2025 Gartner Magic Quadrant for Analytics and BI Platforms</em>. Google Cloud Blog. <a href="https://cloud.google.com/blog/products/looker/google-leader-gartner-magic-quadrant-analytics-bi-2025">https://cloud.google.com/blog/products/looker/google-leader-gartner-magic-quadrant-analytics-bi-2025</a></li>
+      <li>App-Generator. (2023). <em>AdminLTE – Open-source admin dashboard template</em>. <a href="https://app-generator.dev/adminlte">https://app-generator.dev/adminlte</a></li>
+      <li>Duran, E. (2021, July 5). <em>Choosing between Python and Tableau for your data visualization</em>. Analytics Vidhya. <a href="https://medium.com/analytics-vidhya/choosing-between-python-and-tableau-for-your-data-visualization-3f2f3f5b1ef7">https://medium.com/analytics-vidhya/choosing-between-python-and-tableau-for-your-data-visualization-3f2f3f5b1ef7</a></li>
+      <li>InMoment. (2023). <em>Customer experience reporting &amp; dashboards</em>. <a href="https://inmoment.com">https://inmoment.com</a></li>
+      <li>Kovács, I. (2022, February 25). <em>Beyond Tableau and Power BI — have you wondered what else is out there?</em> Medium. <a href="https://ivett.medium.com/beyond-tableau-and-power-bi">https://ivett.medium.com/beyond-tableau-and-power-bi</a></li>
+      <li>Marin, J. (2023, June 1). <em>Choosing the best analytics platform: Dash Plotly vs. Tableau</em>. Medium. <a href="https://medium.com/dashcanvas/dash-vs-tableau">https://medium.com/dashcanvas/dash-vs-tableau</a></li>
+      <li>Mukherjee, S. (2023, January 20). <em>Apache Superset vs Tableau</em>. Preset.io. <a href="https://preset.io/blog/apache-superset-vs-tableau">https://preset.io/blog/apache-superset-vs-tableau</a></li>
+      <li>Plotly. (2025). <em>Dash app examples – Business analytics</em>. Plotly.com. <a href="https://plotly.com/dash/app-gallery">https://plotly.com/dash/app-gallery</a></li>
+      <li>Team Sigma. (2023). <em>5 disadvantages of Excel for data visualization</em>. Sigma Computing. <a href="https://www.sigmacomputing.com/blog/disadvantages-of-excel-for-data-visualization">https://www.sigmacomputing.com/blog/disadvantages-of-excel-for-data-visualization</a></li>
+      <li>Zubkova, N. (2025, February 25). <em>Looker vs. Tableau: The ultimate BI tools battle</em>. Oxagile. <a href="https://www.oxagile.com/article/looker-vs-tableau">https://www.oxagile.com/article/looker-vs-tableau</a></li>
+    </ul>
+  </div>
+</article>
+	<br>
+    <h2 class="section-title">Other Posts</h2>
+    <section id="featured"></section>
+    <section class="latest">
+      <div id="latest" class="card-grid"></div>
+    </section>
+</main> <!-- Kept: only minimal JS (no JSON fetch). Removed: posts.json/Markdown/feed-post.js -->
+	<script>
+  // Nav burger
+  function toggleNav() {
+    document.getElementById("navLinks")?.classList.toggle("show");
+  }
+
+  // Build share links using the H1 as the title
+  (function initShare(){
+    const titleEl = document.getElementById("post-title");
+    const title = encodeURIComponent(titleEl?.textContent?.trim() || document.title);
+    const shareUrl = location.href;
+
+    const ln = document.getElementById("share-ln");
+    const tw = document.getElementById("share-tw");
+    const wa = document.getElementById("share-wa");
+    const cp = document.getElementById("share-copy");
+
+    if (ln) ln.href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl);
+    if (tw) tw.href = "https://twitter.com/intent/tweet?text=" + title + "&url=" + encodeURIComponent(shareUrl);
+    if (wa) wa.href = "https://api.whatsapp.com/send?text=" + title + "%20" + encodeURIComponent(shareUrl);
+    if (cp) cp.onclick = async () => {
+      try { await navigator.clipboard.writeText(shareUrl); alert("Enlace copiado"); }
+      catch { prompt("Copia el enlace:", shareUrl); }
+    };
+
+    if (titleEl) document.title = titleEl.textContent.trim();
+  })();
+
+  // ---------- Featured + Latest ----------
+  const POSTS_JSON_PATH = "posts.json"; // same folder (/blog/)
+
+  function hrefFor(p) {
+    // If url field already points to /blog/<slug>.html, use it
+    return p?.url || (p?.slug ? `/blog/${p.slug}.html` : "#");
+  }
+
+  function renderFeatured(p) {
+    const el = document.getElementById("featured");
+    if (!el) return;
+    if (!p) { el.innerHTML = ""; return; }
+    el.innerHTML = `
+      <a class="feature-card" href="${hrefFor(p)}">
+        <div class="feature-body">
+          ${p.category ? `<span class="kicker">${p.category}</span>` : ""}
+          <h2 class="feature-title"><span>${p.title}</span></h2>
+          <p class="feature-excerpt">${p.excerpt || ""}</p>
+          <div class="feature-meta">
+            <span>${new Date(p.date).toLocaleDateString()}</span>
+            ${p.tags?.length ? `<span> · ${p.tags.join(", ")}</span>` : ""}
+          </div>
+        </div>
+        ${p.hero ? `<div class="feature-media"><img src="${p.hero}" alt="${p.title}"></div>` : ""}
+      </a>
+    `;
+  }
+
+  function renderLatest(list) {
+    const el = document.getElementById("latest");
+    if (!el) return;
+    el.innerHTML = list.map(p => `
+      <a class="tile" href="${hrefFor(p)}">
+        <div class="tile-media">
+          ${p.hero ? `<img src="${p.hero}" alt="${p.title}">` : ""}
+          ${p.category ? `<span class="badge">BLOG</span>` : ""}
+        </div>
+        <div class="tile-body">
+          ${p.category ? `<span class="kicker">${p.category}</span>` : ""}
+          <h3 class="tile-title"><span>${p.title}</span></h3>
+          <p class="tile-excerpt">${p.excerpt || ""}</p>
+          <div class="tile-meta">
+            <span>${new Date(p.date).toLocaleDateString()}</span>
+            ${p.tags?.length ? `<span> · ${p.tags.join(", ")}</span>` : ""}
+          </div>
+        </div>
+      </a>
+    `).join("");
+  }
+
+  function currentSlugFromPath() {
+    // /blog/<slug>.html  → <slug>
+    const m = location.pathname.match(/\/blog\/([^\/]+)\.html$/i);
+    return m ? m[1] : null;
+  }
+
+  (async function boot() {
+    try {
+      const res = await fetch(POSTS_JSON_PATH, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const posts = await res.json();
+
+      posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+      const currentSlug = currentSlugFromPath();
+
+      // Exclude current
+      const others = posts.filter(p => (p.slug || "") !== currentSlug &&
+                                       !(p.url && location.pathname.endsWith(p.url)));
+
+      // Featured: explicit featured wins, else newest
+      let featIdx = others.findIndex(p => p.featured === true);
+      if (featIdx === -1) featIdx = 0;
+      const featured = others[featIdx] || null;
+
+      // Latest 3 (excluding featured)
+      const latest = (featured ? others.filter((_,i) => i !== featIdx) : others).slice(0,3);
+
+      renderFeatured(featured);
+      renderLatest(latest);
+    } catch (e) {
+      console.error("Failed to load posts.json:", e);
+      document.getElementById("latest").innerHTML = "<p style='color:#6e6e73'>No se pudieron cargar más artículos.</p>";
+    }
+  })();
+</script>
+
+</body> 
+</html>
