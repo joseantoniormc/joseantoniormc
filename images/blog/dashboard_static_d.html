@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Previous Clients Dashboard (Static)</title>
+  <!-- Plotly JS once via CDN -->
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; padding:40px; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:#f8f9fa; color:#1c1c1e; }
+    .container { max-width:1200px; margin:0 auto; }
+    h1 { text-align:center; font-weight:700; margin:0 0 24px; }
+    .panel { background:#fff; border-radius:16px; box-shadow:0 2px 6px rgba(0,0,0,.05); padding:20px; margin-bottom:24px; }
+    .kpi-row { display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; margin-bottom: 20px}
+    .kpi-card { flex:1; min-width:220px; background:#fff; border-radius:16px; box-shadow:0 4px 12px rgba(0,0,0,.05); padding:20px; text-align:center; }
+    .kpi-card h4 { color:#6c757d; margin:0 0 6px; font-weight:600; }
+    .kpi-card h2 { margin:0; font-weight:700; }
+    .grid-2 { display:flex; gap:20px; flex-wrap:wrap; }
+    .grid-2 > .panel { flex:1 1 520px; }
+    .subtle { color:#3A3A3C; margin:6px 0 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Previous Clients Dashboard</h1>
+    <div class="panel"><strong>Showing data for all years</strong><em>This works as a filter when linked to a data base</em></div>
+
+    <!-- KPIs -->
+    <div class="kpi-row">
+      <div class="kpi-card"><h4>Total Responses</h4><h2>1,234</h2></div>
+      <div class="kpi-card"><h4>NPS Responses</h4><h2>1,234</h2></div>
+      <div class="kpi-card"><h4>Countries of Origin</h4><h2>60</h2></div>
+      <div class="kpi-card"><h4>NPS Score</h4><h2>56</h2></div>
+    </div>
+
+    <div class="grid-2">
+      <!-- NPS score distribution (0–10), original palette -->
+      <div class="panel">
+        <div id="nps-distribution" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+        <script>
+          (function(){
+            const x = [0,1,2,3,4,5,6,7,8,9,10];
+            // Detractors 148, Passives 247, Promoters 839 -> Sum 1234, NPS 56
+            const y = [10,12,14,20,20,32,40,120,127,330,509];
+            // ORIGINAL palette vibe: light blue bars, darkest blue at 10
+            const light = "#b3d5ff";
+            const highlight = "#1f77b4";
+            const barColors = x.map((s,i)=> i === 10 ? highlight : light);
+
+            Plotly.newPlot("nps-distribution", [{
+              type:"bar",
+              x, y,
+              marker:{ color: barColors, line:{color:"#E5ECF6", width:0.5}},
+              hovertemplate:"Score=%{x}<br>Count=%{y}<extra></extra>",
+              text:y.map(String), textposition:"outside", cliponaxis:false
+            }], {
+              title:{text:"NPS Score Distribution", x:0.05},
+              xaxis:{title:{text:"NPS Score"}, tickmode:"linear", tick0:0, dtick:1, range:[-0.5,10.5]},
+              yaxis:{title:{text:"Count"}},
+              margin:{t:40,b:40,l:40,r:30},
+              font:{family:"Inter, sans-serif"},
+              paper_bgcolor:"white", plot_bgcolor:"white",
+              barmode:"relative"
+            }, {displaylogo:false, responsive:true});
+          })();
+        </script>
+      </div>
+
+      <!-- Equal pie chart with the original blue piecolorway -->
+      <div class="panel">
+        <div id="program-pie" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+        <script>
+          (function(){
+            const labels = ["Program 1","Program 2","Program 3","Program 4","Program 5","Program 6"];
+            const values = [1,1,1,1,1,1]; // equal parts
+            const piecolorway = [
+              "rgb(247,251,255)","rgb(222,235,247)","rgb(198,219,239)",
+              "rgb(158,202,225)","rgb(107,174,214)","rgb(66,146,198)"
+            ];
+            Plotly.newPlot("program-pie", [{
+              type:"pie",
+              labels, values,
+              hole:0.5, textinfo:"percent", textposition:"outside",
+              hovertemplate:"%{label}: %{percent}<extra></extra>",
+              marker:{colors: piecolorway},
+              showlegend:true
+            }], {
+              title:{text:"Programs (Equal Distribution)", x:0.05},
+              legend:{orientation:"h", x:0.5, xanchor:"center", y:-0.1, yanchor:"top"},
+              margin:{t:60},
+              font:{family:"Inter, sans-serif"},
+              paper_bgcolor:"white", plot_bgcolor:"white"
+            }, {displaylogo:false, responsive:true});
+          })();
+        </script>
+      </div>
+    </div>
+
+    <!-- NPS type distribution per year + overall NPS line (colors already match original) -->
+    <div class="panel">
+      <div id="nps-per-year" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+      <script>
+        (function(){
+          const years = [2019, 2020, 2021, 2022, 2023, 2024];
+          const promoters = [118,102,132,150,162,175]; // total 839
+          const passives   = [40, 45, 40, 44, 44, 34]; // total 247
+          const detractors = [22, 23, 28, 26, 24, 25]; // total 148
+          const totals = years.map((_,i)=>promoters[i]+passives[i]+detractors[i]);
+          const npsLine = years.map((_,i)=> ( (promoters[i]/totals[i])*100 - (detractors[i]/totals[i])*100 ));
+
+          const traces = [
+            {name:"Promoter", type:"bar", x:years, y:promoters, marker:{color:"#2ca02c"}, hovertemplate:"Promoter<br>Year=%{x}<br>Count=%{y}<extra></extra>"},
+            {name:"Passive",  type:"bar", x:years, y:passives,   marker:{color:"#ff7f0e"}, hovertemplate:"Passive<br>Year=%{x}<br>Count=%{y}<extra></extra>"},
+            {name:"Detractor",type:"bar", x:years, y:detractors, marker:{color:"#d62728"}, hovertemplate:"Detractor<br>Year=%{x}<br>Count=%{y}<extra></extra>"},
+            {name:"Overall NPS", type:"scatter", mode:"markers+lines", x:years, y:npsLine, yaxis:"y2",
+             marker:{color:"black", size:8}, hovertemplate:"Year=%{x}<br>NPS=%{y:.1f}<extra></extra>"}
+          ];
+
+          Plotly.newPlot("nps-per-year", traces, {
+            title:{text:"NPS Type Distribution per Year with Overall NPS", x:0.05},
+            barmode:"relative",
+            xaxis:{title:{text:"Year"}},
+            yaxis:{title:{text:"Count"}},
+            yaxis2:{title:{text:"NPS"}, overlaying:"y", side:"right", range:[-100,100], showgrid:false},
+            legend:{title:{text:""}},
+            margin:{t:60,b:60},
+            font:{family:"Inter, sans-serif"},
+            paper_bgcolor:"white", plot_bgcolor:"white"
+          }, {displaylogo:false, responsive:true});
+        })();
+      </script>
+    </div>
+
+    <!-- Key Driver Analysis (matches original styling) -->
+    <div class="panel">
+      <h3>Key Driver Analysis: Value vs Overall Satisfaction</h3>
+      <div id="kda" class="plotly-graph-div" style="height:100%; width:100%;"></div>
+      <script>
+        (function(){
+          const names = ["Attribute 1","Attribute 2","Attribute 3","Attribute 4","Attribute 5","Attribute 6","Attribute 7","Attribute 8","Attribute 9","Attribute 10","Attribute 11","Attribute 12"];
+          const x =  [72, 66, 58, 49, 75, 45, 63, 61, 52, 54, 68, 57];
+          const y =  [0.11,0.13,0.10,0.05,0.09,0.00,0.06,0.14,0.08,0.03,0.12,0.02];
+          const avgX = 60, avgY = 0.08;
+
+          const pts = {
+            type:"scatter", mode:"markers", name:"Attributes",
+            x, y, customdata:names.map(n=>[n]),
+            marker:{color:"#0A84FF", size:10, opacity:0.95},
+            hovertemplate:"<b>%{customdata[0]}</b><br>Top-2: %{x:.1f}%<br>Importance β: %{y:.3f}<extra></extra>"
+          };
+
+          const labels = {
+            type:"scatter", mode:"text", showlegend:false,
+            x, y: y.map(v=> v + (v >= avgY ? 0.015 : 0.010)),
+            text:names, textfont:{size:11, color:"#1C1C1E"},
+            textposition: x.map(v=> v >= avgX ? "middle left" : "middle right")
+          };
+
+          Plotly.newPlot("kda", [pts, labels], {
+            title:{text:"Key Driver Analysis: Value Drivers vs Overall Satisfaction", x:0.05},
+            xaxis:{title:{text:"Percent Satisfied with Attribute (Top-2, 6–7)"}, range:[40, 80]},
+            yaxis:{title:{text:"Importance (Standardized β from RidgeCV)"}, range:[-0.01, 0.18]},
+            shapes:[
+              {type:"line", xref:"x", yref:"y", x0:40, x1:80, y0:avgY, y1:avgY, line:{color:"#C7C7CC", dash:"dash", width:1}},
+              {type:"line", xref:"x", yref:"y", x0:avgX, x1:avgX, y0:-0.01, y1:0.18, line:{color:"#C7C7CC", dash:"dash", width:1}}
+            ],
+            annotations:[
+              {x:50, y:0.12, text:"LEVERAGE & EXPAND", showarrow:false, font:{color:"#0A84FF", size:12}},
+              {x:50, y:0.03, text:"LOW GAIN",         showarrow:false, font:{color:"#0A84FF", size:12}},
+              {x:70, y:0.12, text:"MAINTAIN",          showarrow:false, font:{color:"#0A84FF", size:12}},
+              {x:70, y:0.03, text:"FIX",               showarrow:false, font:{color:"#0A84FF", size:12}}
+            ],
+            margin:{t:60,b:60,l:60,r:40},
+            font:{family:"Inter, sans-serif"},
+            paper_bgcolor:"white", plot_bgcolor:"white"
+          }, {displaylogo:false, responsive:true});
+        })();
+      </script>
+    </div>
+  </div>
+</body>
+</html>
