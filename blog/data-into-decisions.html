@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Artículo</title>
+  <meta name="description" content="Artículo del blog">
+  <link rel="icon" type="image/png" href="../img/favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../port.css">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Blog">
+  <meta property="og:description" content="Notas y guías rápidas.">
+</head>
+<body>
+  <nav class="apple-nav">
+    <div class="nav-toggle" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/index.html">Portfolio</a></li>
+      <li><a href="/blog/index.html">Blog</a></li>
+    </ul>
+  </nav>
+
+  <main class="blog-container">
+    <article class="post prose" id="post">
+      <h1 id="post-title">Turning Data into Decisions: What It Really Means</h1>
+        <!-- Author / meta / share -->
+  <div class="post-meta-bar">
+    <div class="author">
+      <a href="/index.html"><img id="author-avatar" src="../img/jarmprofile.png" alt="Antonio Ramirez" class="author-avatar"></a>
+      <div class="author-info">
+        <div class="author-name"><a href="/index.html" style="text-decoration: none; color: black;">Antonio Ramirez</a></div>
+        <div class="author-date"><span id="post-date">25/08/2025</span></div>
+      </div>
+    </div>
+
+    <div class="share">
+      <button class="share-btn" id="share-copy" title="Copiar enlace">
+        <i class="fa-solid fa-link"></i>
+      </button>
+      <a class="share-btn" id="share-ln"  title="Compartir en LinkedIn" target="_blank" rel="noopener">
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+      <a class="share-btn" id="share-tw"  title="Compartir en X" target="_blank" rel="noopener">
+        <i class="fa-brands fa-x-twitter"></i>
+      </a>
+      <a class="share-btn" id="share-wa"  title="Compartir en WhatsApp" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </div> <!-- ✅ CLOSE post-meta-bar -->
+
+  <img id="post-hero" class="hero" alt="" style="" src="/images/blog/cover.jpg">
+
+  <!-- Hero (optional) -->
+  <img id="post-hero" class="hero" alt="" style="display:none;">
+
+  <!-- Body -->
+  <div id="post-body">
+    <h2>The Promise vs. Reality of Data-Driven Decisions</h2>
+<p>Data-driven decision making has become a business buzzword echoed in classrooms and boardrooms alike. Professors have long preached the importance of basing strategic decisions on data, often citing famous examples of companies using analytics to gain an edge. Indeed, there’s truth behind the hype: one survey of over 1,000 senior executives found that highly data-driven organizations were <strong>3× more likely</strong> to report significant improvements in decision-making than those relying less on data (Brynjolfsson, Hitt, &amp; Kim, 2011).</p>
+<p>This aligns with W. Edwards Deming’s famous maxim: <em>“Without data, you’re just another person with an opinion”</em> (Deming, as cited in Harvard Business School Online, 2022). In theory, turning data into decisions means using empirical evidence to drive strategy instead of gut feel or inertia. But what does this look like in practice, and why do so many analytics projects result in pretty dashboards rather than real action?</p>
+
+<div class="profile-pics">
+  <div class="profile-item">
+    <img src="../images/blog/wEdwards.jpeg" alt="W. Edwards Deming">
+    <p class="profile-name"><em>W. Edwards Deming</em></p>
+  </div>
+</div>
+
+<h2>The Promise vs. Reality of Data-Driven Decisions</h2>
+<p>Being “data-driven” implies that <strong>decisions are grounded in facts</strong>. The promise is compelling: collect data, analyze it for insights, and then <strong>base decisions on those insights</strong> to achieve better outcomes. Many tech and SaaS companies obsessively track metrics like customer churn, <strong>Net Promoter Score (NPS)</strong>, and user engagement, hoping to feed these numbers into smarter strategies.</p>
+<p>In reality, there’s often a <strong>gap between analysis and action</strong>. I recall working on an NPS program where we defined <em>detractors, passives,</em> and <em>promoters</em>, crunched the scores, and generated sleek reports. Yet, those reports didn’t clearly feed into any decision on how to improve NPS; they became more of a <strong>vanity metric</strong>. This isn’t just my experience; even analytics experts warn that NPS results can devolve into <em>“a vanity metric that is of little use”</em> if there’s no plan to act on the findings (Lundberg, 2021). Too often, data teams build dashboards that <em>nobody uses</em> in day-to-day decisions. Scrolling through LinkedIn or Reddit, you’ll find disillusioned analysts joking that <strong>cleaning data and making unused dashboards</strong> has become the world’s largest pyramid scheme for Business Analysts.</p>
+
+<p><img src="https://trustmary.com/wp-content/uploads/2021/11/Trustmary-NPS-2.png" alt="NPS Illustration" class="modal-img"></p>
+
+<p>Why does this happen? A major culprit is the <em>“analysis-to-action” gap.</em> Companies invest billions in data tools and BI platforms, but <strong>having flashy dashboards doesn’t mean the organization is making better decisions</strong>. As Gartner reported, more than <strong>85% of analytics projects fail to deliver tangible benefits</strong>, not because the tech failed but because organizations struggled to turn insights into action (Gartner, 2022). In many cases, metrics overload actually paralyzes decision-making. Leaders drown in KPIs (churn, NPS, revenue, engagement, etc.) without clarity on which levers to pull. <em>“Data overload”</em> can lead to analysis paralysis, where teams spend more time arguing about numbers than implementing solutions (Brynjolfsson &amp; McElheran, 2016). The result is a dashboard fallacy: the illusion of insight and progress, but no real change on the ground.</p>
+
+<h2>Beyond the Numbers: Why Context and Insight Matter</h2>
+<p>Here’s the crux: <strong>Turning data into decisions is more complex than just analyzing numbers and viewing graphs.</strong> Data alone, without context, can mislead. In my own experience in the automotive sector, I encountered a puzzling phenomenon: two tire models of the same size, offered at the same price. One was a premium brand tire, the other a lesser-known brand. On paper (and in our sales data), you’d expect the premium brand to outsell the lower-quality brand. Yet the opposite was true, the “inferior” brand was flying off the shelves. The data showed the <em>what</em> (Brand B outsells Brand A), but not the <em>why</em>. To find the answer, I had to go beyond the spreadsheet. By observing customers on the showroom floor, listening to their comments and tone, and even feeling the tire products myself, I discovered the hidden factors: subtle differences in tread design and a perception of better durability in the lesser-known brand, which earned buyers’ trust. This on-the-ground insight was the <strong>“truth behind the truth”</strong> — a qualitative context that explained the numbers.</p>
+<p>This anecdote echoes a broader lesson: <strong>data needs domain knowledge and human intuition to drive sound decisions.</strong> Research emphasizes that while data analysis helps quantify issues, <em>“decision-making based on data requires inherent subject matter knowledge and common sense”</em>; without context, leaders may misinterpret data or draw wrong conclusions (Harvard Business School Online, 2022).</p>
+<p><em>(This is a cool story).</em><br>
+Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <em>“quantification bias”</em>, the blind belief in the supremacy of quantitative data. Wang recounts how Nokia executives in the late 2000s trusted their big data showing strong sales and flatlined on strategy, missing the seismic shift to smartphones. Meanwhile, her firsthand observations in China (what she terms <em>“thick data”</em>, i.e. rich qualitative insights) revealed consumers eagerly buying knockoff smartphones and craving new functionality. Because those insights weren’t <em>“measurable”</em> in Nokia’s dashboards, executives dismissed them, a fateful mistake (Wang, 2016). Her point is that <strong>quantitative data only tells you <em>what</em> is happening; human insights tell you <em>why</em></strong>.</p>
+
+<div class="profile-pics">
+  <div class="profile-item">
+    <img src="https://images.squarespace-cdn.com/content/v1/58cb5bbd8419c210934104df/1558317979074-KI5LTDF2RHOQC02O8R4D/_65A5872-Edit-2.jpg?format=2500w" alt="Tricia Wang">
+    <p class="profile-name"><em>Tricia Wang</em></p>
+  </div>
+</div>
+
+<p>Even in the tech realm, where A/B tests and algorithms reign, intuition and experience play a role. In ambiguous, high-stakes scenarios, even seasoned executives and surgeons find that their <strong>gut feelings</strong> (honed by experience) can complement data by prompting timely action when endless analysis would otherwise stall decisions (Brynjolfsson &amp; McElheran, 2016). In short, effective decision-makers blend data and domain expertise to see the full picture.</p>
+
+<h2>Examples of Data-Driven Decisions Done Right</h2>
+<p>For a positive illustration of turning data into decisions <em>(this one from my Modern Analytics class)</em>, look no further than the tech giants who have woven data into their DNA. <strong>Netflix</strong> is a standout example. The streaming company infamously spent <strong>$100 million</strong> to produce <em>House of Cards</em> without even seeing a pilot episode, a gamble made purely on data analysis. Netflix knew from its troves of viewing data that a critical mass of subscribers watched the original <em>House of Cards</em> (a British version that existed before), and those viewers also tended to love content starring Kevin Spacey and directed by David Fincher. Betting on that correlation, Netflix greenlit the U.S. remake with Spacey and Fincher onboard. The result was a smash hit that <strong>validated a bold data-driven decision</strong> (Marr, 2016).</p>
+<p>Another notable figure, <strong>Cassie Kozyrkov</strong>, Chief Decision Scientist at Google, has been championing “Decision Intelligence”, an approach that explicitly focuses on the <strong>decision process</strong> as the end-goal of data science. She argues that data initiatives should start by identifying what decision needs to be made, and then work backwards to gather and analyze relevant data. In her view, <em>“decision-making is turning information into action,”</em> so data work only matters if it leads to better actions (Kozyrkov, 2019). This mindset prevents the common pitfall of doing analysis for analysis’ sake.</p>
+
+<h2>Making Data Work: Turning Insights into Action</h2>
+<p>So, what does it really take to turn data into decisions effectively? It’s a blend of analytical rigor, domain knowledge, and organizational process. Based on industry research, Fuqua courses, and my own observations, here are a few key practices:</p>
+<ol>
+  <li><strong>Start with a clear question or decision</strong>. Don’t collect data blindly. Begin by defining <em>what</em> decision or strategic question you’re trying to answer.</li>
+  <li><strong>Ensure insights have ownership and action plans</strong>. Every dashboard KPI should have an owner and a defined next step.</li>
+  <li><strong>Integrate qualitative context with quantitative data</strong>. Combine the <em>“why”</em> with the <em>“what.”</em></li>
+  <li><strong>Cultivate a data-informed culture</strong>. Avoid analysis paralysis by empowering action once there’s sufficient evidence.</li>
+  <li><strong>Invest in data quality and accessibility</strong>. Reliable data must be available to those making decisions.</li>
+</ol>
+<p>In the end, “turning data into decisions” means creating a continuous loop from data to insight to action. Companies that master this balance (leveraging data’s precision and human insight’s depth) are the ones truly delivering on the promise of data-driven decision making.</p>
+
+<h2>References</h2>
+<ul class="refs">
+  <li>Brynjolfsson, E., Hitt, L., &amp; Kim, H. (2011). <em>Strength in Numbers: How Does Data-Driven Decisionmaking Affect Firm Performance?</em> SSRN. <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1819486" target="_blank" rel="noopener">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1819486</a></li>
+  <li>Brynjolfsson, E., &amp; McElheran, K. (2016). <em>Data-driven decision making: The power and limits of analytics.</em> Harvard Business Review. <a href="https://hbr.org/2016/02/data-driven-decision-making-the-power-and-limits-of-analytics" target="_blank" rel="noopener">https://hbr.org/2016/02/data-driven-decision-making-the-power-and-limits-of-analytics</a></li>
+  <li>Gartner. (2019). <em>Through 2022, only 20% of analytic insights will deliver business outcomes.</em> (as cited in SalesforceBen, 2020). <a href="https://www.salesforceben.com/6-reasons-why-bi-and-analytics-projects-fail-and-how-to-avoid-it/" target="_blank" rel="noopener">https://www.salesforceben.com/6-reasons-why-bi-and-analytics-projects-fail-and-how-to-avoid-it/</a></li>
+  <li>Harvard Business School Online. (2022). <em>What does it mean to be data-driven?</em> <a href="https://online.hbs.edu/blog/post/data-driven-decision-making" target="_blank" rel="noopener">https://online.hbs.edu/blog/post/data-driven-decision-making</a></li>
+  <li>Kozyrkov, C. (2019). <em>Decision intelligence: Turning information into better action.</em> Google Cloud Blog. <a href="https://cloud.google.com/blog/products/ai-machine-learning/decision-intelligence-turning-information-into-better-action" target="_blank" rel="noopener">https://cloud.google.com/blog/products/ai-machine-learning/decision-intelligence-turning-information-into-better-action</a></li>
+  <li>Lundberg, J. (2021). <em>The problem with Net Promoter Score.</em> UX Collective. <a href="https://uxdesign.cc/the-problem-with-net-promoter-score-4ec86d0f469f" target="_blank" rel="noopener">https://uxdesign.cc/the-problem-with-net-promoter-score-4ec86d0f469f</a></li>
+  <li>Marr, B. (2016). <em>How big data is changing the way Netflix makes decisions.</em> Forbes. <a href="https://www.forbes.com/sites/bernardmarr/2016/06/17/how-big-data-is-changing-the-way-netflix-makes-decisions/" target="_blank" rel="noopener">https://www.forbes.com/sites/bernardmarr/2016/06/17/how-big-data-is-changing-the-way-netflix-makes-decisions/</a></li>
+  <li>Wang, T. (2016). <em>The human insights missing from big data.</em> TED Talk. <a href="https://www.ted.com/talks/tricia_wang_the_human_insights_missing_from_big_data" target="_blank" rel="noopener">https://www.ted.com/talks/tricia_wang_the_human_insights_missing_from_big_data</a></li>
+</ul>
+
+  </div>
+</article>
+  <br>
+    <h2 class="section-title">Other Posts</h2>
+    <section id="featured"></section>
+    <section class="latest">
+      <div id="latest" class="card-grid"></div>
+    </section>
+</main> <!-- Kept: only minimal JS (no JSON fetch). Removed: posts.json/Markdown/feed-post.js -->
+  <script>
+  // Nav burger
+  function toggleNav() {
+    document.getElementById("navLinks")?.classList.toggle("show");
+  }
+
+  // Build share links using the H1 as the title
+  (function initShare(){
+    const titleEl = document.getElementById("post-title");
+    const title = encodeURIComponent(titleEl?.textContent?.trim() || document.title);
+    const shareUrl = location.href;
+
+    const ln = document.getElementById("share-ln");
+    const tw = document.getElementById("share-tw");
+    const wa = document.getElementById("share-wa");
+    const cp = document.getElementById("share-copy");
+
+    if (ln) ln.href = "https://www.linkedin.com/sharing/share-offsite/?url=" + encodeURIComponent(shareUrl);
+    if (tw) tw.href = "https://twitter.com/intent/tweet?text=" + title + "&url=" + encodeURIComponent(shareUrl);
+    if (wa) wa.href = "https://api.whatsapp.com/send?text=" + title + "%20" + encodeURIComponent(shareUrl);
+    if (cp) cp.onclick = async () => {
+      try { await navigator.clipboard.writeText(shareUrl); alert("Enlace copiado"); }
+      catch { prompt("Copia el enlace:", shareUrl); }
+    };
+
+    if (titleEl) document.title = titleEl.textContent.trim();
+  })();
+
+  // ---------- Featured + Latest ----------
+  const POSTS_JSON_PATH = "posts.json"; // same folder (/blog/)
+
+  function hrefFor(p) {
+    // If url field already points to /blog/<slug>.html, use it
+    return p?.url || (p?.slug ? `/blog/${p.slug}.html` : "#");
+  }
+
+  function renderFeatured(p) {
+    const el = document.getElementById("featured");
+    if (!el) return;
+    if (!p) { el.innerHTML = ""; return; }
+    el.innerHTML = `
+      <a class="feature-card" href="${hrefFor(p)}">
+        <div class="feature-body">
+          ${p.category ? `<span class="kicker">${p.category}</span>` : ""}
+          <h2 class="feature-title"><span>${p.title}</span></h2>
+          <p class="feature-excerpt">${p.excerpt || ""}</p>
+          <div class="feature-meta">
+            <span>${new Date(p.date).toLocaleDateString()}</span>
+            ${p.tags?.length ? `<span> · ${p.tags.join(", ")}</span>` : ""}
+          </div>
+        </div>
+        ${p.hero ? `<div class="feature-media"><img src="${p.hero}" alt="${p.title}"></div>` : ""}
+      </a>
+    `;
+  }
+
+  function renderLatest(list) {
+    const el = document.getElementById("latest");
+    if (!el) return;
+    el.innerHTML = list.map(p => `
+      <a class="tile" href="${hrefFor(p)}">
+        <div class="tile-media">
+          ${p.hero ? `<img src="${p.hero}" alt="${p.title}">` : ""}
+          ${p.category ? `<span class="badge">BLOG</span>` : ""}
+        </div>
+        <div class="tile-body">
+          ${p.category ? `<span class="kicker">${p.category}</span>` : ""}
+          <h3 class="tile-title"><span>${p.title}</span></h3>
+          <p class="tile-excerpt">${p.excerpt || ""}</p>
+          <div class="tile-meta">
+            <span>${new Date(p.date).toLocaleDateString()}</span>
+            ${p.tags?.length ? `<span> · ${p.tags.join(", ")}</span>` : ""}
+          </div>
+        </div>
+      </a>
+    `).join("");
+  }
+
+  function currentSlugFromPath() {
+    // /blog/<slug>.html  → <slug>
+    const m = location.pathname.match(/\/blog\/([^\/]+)\.html$/i);
+    return m ? m[1] : null;
+  }
+
+  (async function boot() {
+    try {
+      const res = await fetch(POSTS_JSON_PATH, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const posts = await res.json();
+
+      posts.sort((a,b) => new Date(b.date) - new Date(a.date));
+      const currentSlug = currentSlugFromPath();
+
+      // Exclude current
+      const others = posts.filter(p => (p.slug || "") !== currentSlug &&
+                                       !(p.url && location.pathname.endsWith(p.url)));
+
+      // Featured: explicit featured wins, else newest
+      let featIdx = others.findIndex(p => p.featured === true);
+      if (featIdx === -1) featIdx = 0;
+      const featured = others[featIdx] || null;
+
+      // Latest 3 (excluding featured)
+      const latest = (featured ? others.filter((_,i) => i !== featIdx) : others).slice(0,3);
+
+      renderFeatured(featured);
+      renderLatest(latest);
+    } catch (e) {
+      console.error("Failed to load posts.json:", e);
+      document.getElementById("latest").innerHTML = "<p style='color:#6e6e73'>No se pudieron cargar más artículos.</p>";
+    }
+  })();
+</script>
+
+</body> 
+</html>
