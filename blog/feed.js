@@ -29,7 +29,7 @@ async function renderFeed() {
 }
 
 function hrefFor(p) {
-  return p?.slug ? `post.html?slug=${encodeURIComponent(p.slug)}` : (p?.url || "#");
+  return p?.slug ? `${encodeURIComponent(p.slug)}.html` : (p?.url || "#");
 }
 
 function renderFeatured(p) {
