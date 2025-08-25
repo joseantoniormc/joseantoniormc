@@ -162,7 +162,7 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
 
   function hrefFor(p) {
     // If url field already points to /blog/<slug>.html, use it
-    return p?.url || (p?.slug ? `/blog/${p.slug}.html` : "#");
+    return p?.url || (p?.slug ? `blog/${p.slug}.html` : "#");
   }
 
   function renderFeatured(p) {
@@ -170,7 +170,7 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
     if (!el) return;
     if (!p) { el.innerHTML = ""; return; }
     el.innerHTML = `
-      <a class="feature-card" href="joseantoniormc/${hrefFor(p)}">
+      <a class="feature-card" href="${hrefFor(p)}">
         <div class="feature-body">
           ${p.category ? `<span class="kicker">${p.category}</span>` : ""}
           <h2 class="feature-title"><span>${p.title}</span></h2>
@@ -189,7 +189,7 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
     const el = document.getElementById("latest");
     if (!el) return;
     el.innerHTML = list.map(p => `
-      <a class="tile" href="joseantoniormc/${hrefFor(p)}">
+      <a class="tile" href="${hrefFor(p)}">
         <div class="tile-media">
           ${p.hero ? `<img src="${p.hero}" alt="${p.title}">` : ""}
           ${p.category ? `<span class="badge">BLOG</span>` : ""}
@@ -246,5 +246,6 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
 </body> 
 
 </html>
+
 
 
