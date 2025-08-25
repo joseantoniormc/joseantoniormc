@@ -4,7 +4,7 @@
     "slug": "data-viz-beyond",
     "date": "2025-08-25",
     "excerpt": "If you think data visualization begins and ends with Tableau or Power BI, you’re already behind. From Plotly to Looker to DIY dashboards, the new frontier is about agility, not brand names.",
-    "hero": "/images/blog/Data-Visualization-Software.jpg",
+    "hero": "../images/blog/Data-Visualization-Software.jpg",
     "category": "Sleep Debt",
     "tags": ["Data Visualization","Tableau","Looker"],
     "featured": true
@@ -14,8 +14,9 @@
     "slug": "data-into-decisions",
     "date": "2025-08-22",
     "excerpt": "Most companies don’t fail because they lack data, they fail because they don’t know how to turn it into real decisions. Dashboards don’t drive strategy, people do.",
-    "hero": "/images/blog/cover.jpg",
+    "hero": "../images/blog/cover.jpg",
     "tags": ["Business Analytics"],
     "category":"Business Analytics"
   }
+
 ]
