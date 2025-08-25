@@ -189,7 +189,7 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
     const el = document.getElementById("latest");
     if (!el) return;
     el.innerHTML = list.map(p => `
-      <a class="tile" href="${hrefFor(p)}">
+      <a class="tile" href="joseantoniormc/${hrefFor(p)}">
         <div class="tile-media">
           ${p.hero ? `<img src="${p.hero}" alt="${p.title}">` : ""}
           ${p.category ? `<span class="badge">BLOG</span>` : ""}
@@ -246,4 +246,5 @@ Technology ethnographer <strong>Tricia Wang</strong> calls this the danger of <e
 </body> 
 
 </html>
+
 
