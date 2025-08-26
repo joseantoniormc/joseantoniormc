@@ -37,7 +37,7 @@ For a business analyst, adaptability is key. A modern analytics career requires 
 
 ## My Case: Going License-Free with Python and Plotly
 
-This is the main reason I wrote this post. While working at Duke’s Fuqua School of Business witht he Marketing Intelligence team, I needed to build a professional, interactive visualization without relying on licenses or external hosting. My solution? **Plotly** with **Dash** in Python.  
+This is the main reason I wrote this post. While working at Duke’s Fuqua School of Business with the Marketing Intelligence team, I needed to build a professional, interactive visualization without relying on licenses or external hosting. My solution? **Plotly** with **Dash** in Python.  
 
 With Plotly, I could clean, analyze, and visualize data in one workflow. Dash then let me assemble those visuals into a browser-ready dashboard, exportable as a simple `.html` file. The result was a standalone interactive dashboard that required no licenses, servers, or installations.  
 
