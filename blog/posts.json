@@ -4,7 +4,7 @@
     "slug": "amazon-key",
     "date": "2025-08-28",
     "excerpt": "Amazon Key promised to stop package theft with a smart lock. But its real challenge wasn’t the technology, it was convincing customers to open their doors.",
-    "hero": "/images/blog/amazon-key.jpg",
+    "hero": "../images/blog/amazon-key.jpg",
     "category": "Business Analytics",
     "tags": ["Business Analytics","Amazon","Customer"]
   },
@@ -29,4 +29,5 @@
   }
 
 ]
+
 
