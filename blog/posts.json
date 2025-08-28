@@ -1,5 +1,14 @@
 [
   {
+    "title": "Amazon Key and the Analytics of Trust: Why Building the Solution Was Only Half the Battle",
+    "slug": "amazon-key",
+    "date": "2025-08-28",
+    "excerpt": "Amazon Key promised to stop package theft with a smart lock. But its real challenge wasn’t the technology, it was convincing customers to open their doors.",
+    "hero": "/images/blog/amazon-key.jpg",
+    "category": "Business Analytics",
+    "tags": ["Business Analytics","Amazon","Customer"]
+  },
+  {
     "title": "The Power of Data Visualization Beyond Tableau and Power BI",
     "slug": "data-viz-beyond",
     "date": "2025-08-25",
@@ -20,3 +29,4 @@
   }
 
 ]
+
