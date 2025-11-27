@@ -1,6 +1,3 @@
-
-# From First Orders to Lasting Loyalty: How Data and Behavioral Design Drive Retention
-
 **Introduction**
 
 Working on a recent delivery data case study reminded me of what truly defines customer loyalty. In marketing, loyalty is often measured along three key dimensions: the **propensity to repurchase**, overall **satisfaction**, and the **willingness to recommend** a service to others (Qualtrics XM Institute). In other words, a loyal customer not only comes back regularly and feels happy with the experience, but also becomes an advocate for the brand. (As one professor of mine liked to say: “Will they buy again, feel good about it, and tell their friends?”)
@@ -15,7 +12,7 @@ The case study data, a month’s worth of orders, exposed a striking pattern: cu
 
 Those who did continue using the service tended to scale back by late month: the **average order value** shrank and **tip amounts** dropped. It’s as if many users gave the service a try, but then either lost interest or ran into end-of-month budget constraints and churned out.
 
-<img src="../images/blog/cohorts.png" alt="cohorts" class="modal-img">
+<img src="../images/blog/cohorts.png" alt="cohorts">
 > *Weekly customer retention: only ~5% of users.*
 
 
