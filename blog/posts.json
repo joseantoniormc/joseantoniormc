@@ -1,4 +1,13 @@
 [
+    {
+  "title": "From First Orders to Lasting Loyalty: How Data and Behavioral Design Drive Retention",
+  "slug": "retention",
+  "date": "2025-11-27",
+  "excerpt": "What does a delivery dataset teach us about real loyalty? This post explores why discounts aren't enough—and how habit design, personalization, and gamification can keep customers coming back.",
+  "hero": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.reforma.com%2Fduolingo-revela-novedades-en-app-durante-duocon%2Far2459860&psig=AOvVaw0wjyyYlXAFPUSNDpD8yNVX&ust=1764361821201000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOiyz5CWk5EDFQAAAAAdAAAAABAE",
+  "category": "Business Analytics",
+  "tags": ["Retention", "Gamification", "Customer Loyalty", "Behavioral Design"]
+},
   {
     "title": "Amazon Key and the Analytics of Trust: Why Building the Solution Was Only Half the Battle",
     "slug": "amazon-key",
@@ -29,5 +38,6 @@
   }
 
 ]
+
 
 
