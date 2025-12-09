@@ -1,5 +1,3 @@
-**Introduction**
-
 Working on a recent delivery data case study reminded me of what truly defines customer loyalty. In marketing, loyalty is often measured along three key dimensions: the **propensity to repurchase**, overall **satisfaction**, and the **willingness to recommend** a service to others (Qualtrics XM Institute). In other words, a loyal customer not only comes back regularly and feels happy with the experience, but also becomes an advocate for the brand. (As one professor of mine liked to say: “Will they buy again, feel good about it, and tell their friends?”)
 
 Achieving all three is no small feat. Yet when engagement metrics slip, many companies reflexively reach for a quick fix... **discounts**. Price promotions have always been a go-to strategy to jolt demand, and indeed they can drive short-term spikes in orders. However, heavy discounting does not create real loyalty. Research warns that an over-reliance on price cuts can even backfire by training customers to wait for the next deal, eroding brand value in the long run (Brandmovers, 2025).
@@ -13,7 +11,8 @@ The case study data, a month’s worth of orders, exposed a striking pattern: cu
 Those who did continue using the service tended to scale back by late month: the **average order value** shrank and **tip amounts** dropped. It’s as if many users gave the service a try, but then either lost interest or ran into end-of-month budget constraints and churned out.
 
 <img src="../images/blog/cohorts.png" alt="cohorts">
-> *Weekly customer retention: only ~5% of users.*
+
+*Weekly customer retention: only ~5% of users.*
 
 
 ## Quick Wins: Smarter Incentives and Personalized Nudges
